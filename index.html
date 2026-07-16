@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,51 +8,77 @@
 
     <title>GameUniverse</title>
 </head>
+
 <body>
     <header class="header">
-        <a href="index.html" class="logo">
-            Game Universe
-        </a>
+        <a href="index.html" class="logo">Game Universe</a>
 
-        <input type="checkbox" id="nav_box" name="nav_box">
+        <!-- Mobile menu checkbox -->
+        <input type="checkbox" id="nav-box">
 
-        <label for="nav_box" class="nav_btn">
+        <!-- Hamburger button -->
+        <label for="nav-box" class="nav-btn">
             <span></span>
             <span></span>
             <span></span>
-            <i class="fas fa-bars"></i>
         </label>
 
-        <nav>
-            <div class="nabar">
-
+        <!-- Navigation -->
+        <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="games.html">Games</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-              
             </ul>
         </nav>
-    </div>
-        
-           
     </header>
 
-   
     <div id="ps1">
         <video autoplay muted loop>
             <source src="media/video/ps1.mp4" type="video/mp4">
         </video>
     </div>
 
-    <div class="universe2">
-    <h2>Welcome to Game Universe</h2>
+    <div id="section1">
+        <h2>Welcome to Game Universe</h2>
+    </div>
+    <div id="section2">
+        <p>Where every choice unlocks a new adventure. Discover the latest releases, timeless classics, and everything
+            in between all in one universe built for gamers.</p>
     </div>
 
-    <div class="universe3">
-    <p>Where every choice unlocks a new adventure. Discover the latest releases, timeless classics, and everything in between all in one universe built for gamers.</p>
+<section class="games">
+    <h2>Best rated Games on The Universe</h2>
+    <div class="game-list">
+        <article class="game-card">
+            <img src="media/images/tlou.png" alt="The Last of Us par1 ps5">
+            <h3>The Last of Us Part I</h3>
+            <p>Experience the emotional journey of Joel and Ellie in this critically acclaimed action-adventure game.</p>
+            <p>£59.99</p>
+            <button>Buy Now</button>
+        </article>
+
+            <article class="game-card">
+                <img src="media/images/tlou2.png" alt="The Last of Us part2 ps5">
+                <h3>The Last of Us Part II</h3>
+                <p>Continue the story of Ellie in this gripping sequel that explores themes of revenge and redemption.</p>
+                <p>£69.99</p>
+                <button>Buy Now</button>
+            </article>
+
+            <article class="game-card">
+                <img src="media/images/god2.png" alt="God of War Ragnarok ps5">
+                <h3>God of War Ragnarok</h3>
+                <p>Join Kratos and Atreus on their epic journey through Norse mythology in this action-packed adventure.</p>
+                <p>£79.99</p>
+                <button>Buy Now</button>
+            </article>
+        </div>
     </div>
-    
+
+</section>
+
 </body>
+
 </html>
