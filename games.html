@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style/style.css">
 
@@ -21,15 +20,12 @@
         <a href="index.html" class="logo">
             Game Universe
 
-            <img src="media/images/space.png"
-                 alt="Game Universe logo">
+            <img src="media/images/space.png" alt="Game Universe logo">
         </a>
 
         <input type="checkbox" id="nav-box">
 
-        <label for="nav-box"
-               class="nav-btn"
-               aria-label="Open navigation menu">
+        <label for="nav-box" class="nav-btn" aria-label="Open navigation menu">
 
             <span></span>
             <span></span>
@@ -58,8 +54,66 @@
             </ul>
 
         </nav>
+        <button class="cart-button" id="cart-button" type="button">
+            🛒
+            <span id="cart-count">0</span>
+        </button>
 
     </header>
+
+    <!-- Dark background behind cart -->
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+
+    <!-- Shopping cart panel -->
+
+    <aside class="cart-panel" id="cart-panel">
+
+        <div class="cart-header">
+
+            <div>
+                <p class="section-label">Your collection</p>
+                <h2>Shopping Cart</h2>
+            </div>
+
+            <button class="close-cart" id="close-cart" type="button" aria-label="Close shopping cart">
+                &times;
+            </button>
+
+        </div>
+
+
+        <div class="cart-items" id="cart-items">
+
+            <!-- JavaScript will insert cart items here -->
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>Total</span>
+
+                <strong id="cart-total">
+                    £0.00
+                </strong>
+
+            </div>
+
+            <button class="checkout-button" id="checkout-button" type="button">
+                Buy Games
+            </button>
+
+            <button class="clear-cart-button" id="clear-cart" type="button">
+                Clear Cart
+            </button>
+
+        </div>
+
+    </aside>
 
 
     <main>
@@ -118,16 +172,11 @@
 
                 <div class="game-search">
 
-                    <label for="game-search"
-                           class="visually-hidden">
+                    <label for="game-search" class="visually-hidden">
                         Search games
                     </label>
 
-                    <input
-                        type="search"
-                        id="game-search"
-                        placeholder="Search for a game..."
-                    >
+                    <input type="search" id="game-search" placeholder="Search for a game...">
 
                     <button type="button">
                         Search
@@ -169,14 +218,16 @@
 
                 <!-- The Last of Us Part I -->
 
-                <article class="store-game-card">
+                <article
+                class="store-game-card"
+                data-name="The Last of Us Part I"
+                data-price="59.99"
+                data-image="media/images/tlou.png"
+                data-platform="playstation">
 
                     <div class="game-image">
 
-                        <img
-                            src="media/images/tlou.png"
-                            alt="The Last of Us Part I"
-                        >
+                        <img src="media/images/tlou.png" alt="The Last of Us Part I">
 
                         <span class="game-platform">
                             PlayStation
@@ -203,7 +254,7 @@
                                 £59.99
                             </p>
 
-                            <button type="button">
+                            <button type="button" class="add-to-cart">
                                 Add to Cart
                             </button>
 
@@ -216,14 +267,17 @@
 
                 <!-- The Last of Us Part II -->
 
-                <article class="store-game-card">
+                <article
+    class="store-game-card"
+    data-name="The Last of Us Part II"
+    data-price="49.99"
+    data-image="media/images/tlou2.png"
+    data-platform="playstation"
+>
 
                     <div class="game-image">
 
-                        <img
-                            src="media/images/tlou2.png"
-                            alt="The Last of Us Part II"
-                        >
+                        <img src="media/images/tlou2.png" alt="The Last of Us Part II">
 
                         <span class="game-platform">
                             PlayStation
@@ -250,7 +304,7 @@
                                 £49.99
                             </p>
 
-                            <button type="button">
+                            <button type="button" class="add-to-cart">
                                 Add to Cart
                             </button>
 
@@ -263,14 +317,17 @@
 
                 <!-- God of War Ragnarok -->
 
-                <article class="store-game-card">
+                <article
+    class="store-game-card"
+    data-name="God of War Ragnarök"
+    data-price="69.99"
+    data-image="media/images/god2.png"
+    data-platform="playstation"
+>
 
                     <div class="game-image">
 
-                        <img
-                            src="media/images/god2.png"
-                            alt="God of War Ragnarok"
-                        >
+                        <img src="media/images/god2.png" alt="God of War Ragnarok">
 
                         <span class="game-platform">
                             PlayStation
@@ -297,7 +354,7 @@
                                 £69.99
                             </p>
 
-                            <button type="button">
+                            <button type="button" class="add-to-cart">
                                 Add to Cart
                             </button>
 
@@ -310,14 +367,17 @@
 
                 <!-- God of War -->
 
-                <article class="store-game-card">
+                <article
+    class="store-game-card"
+    data-name="God of War"
+    data-price="29.99"
+    data-image="media/images/god.png"
+    data-platform="playstation"
+>
 
                     <div class="game-image">
 
-                        <img
-                            src="media/images/god.png"
-                            alt="God of War"
-                        >
+                        <img src="media/images/god.png" alt="God of War">
 
                         <span class="game-platform">
                             PlayStation
@@ -344,7 +404,7 @@
                                 £29.99
                             </p>
 
-                            <button type="button">
+                            <button type="button" class="add-to-cart">
                                 Add to Cart
                             </button>
 
@@ -357,14 +417,17 @@
 
                 <!-- Spider-Man -->
 
-                <article class="store-game-card">
+                <article
+    class="store-game-card"
+    data-name="Marvel's Spider-Man"
+    data-price="39.99"
+    data-image="media/images/spider.png"
+    data-platform="playstation"
+>
 
                     <div class="game-image">
 
-                        <img
-                            src="media/images/spider.png"
-                            alt="Marvel Spider-Man"
-                        >
+                        <img src="media/images/spider.png" alt="Marvel Spider-Man">
 
                         <span class="game-platform">
                             PlayStation
@@ -391,7 +454,7 @@
                                 £39.99
                             </p>
 
-                            <button type="button">
+                            <button type="button" class="add-to-cart">
                                 Add to Cart
                             </button>
 
@@ -404,14 +467,17 @@
 
                 <!-- Grand Theft Auto -->
 
-                <article class="store-game-card">
+                <article
+    class="store-game-card"
+    data-name="Grand Theft Auto"
+    data-price="34.99"
+    data-image="media/images/gta.png"
+    data-platform="multi-platform"
+>
 
                     <div class="game-image">
 
-                        <img
-                            src="media/images/gta.png"
-                            alt="Grand Theft Auto"
-                        >
+                        <img src="media/images/gta.png" alt="Grand Theft Auto">
 
                         <span class="game-platform">
                             Multi-platform
@@ -438,7 +504,7 @@
                                 £34.99
                             </p>
 
-                            <button type="button">
+                            <button type="button" class="add-to-cart">
                                 Add to Cart
                             </button>
 
@@ -451,14 +517,17 @@
 
                 <!-- Elden Ring -->
 
-                <article class="store-game-card">
+                <article
+    class="store-game-card"
+    data-name="Elden Ring"
+    data-price="54.99"
+    data-image="media/images/elden.png"
+    data-platform="multi-platform"
+>
 
                     <div class="game-image">
 
-                        <img
-                            src="media/images/elden.png"
-                            alt="Elden Ring"
-                        >
+                        <img src="media/images/elden.png" alt="Elden Ring">
 
                         <span class="game-platform">
                             Multi-platform
@@ -485,7 +554,7 @@
                                 £54.99
                             </p>
 
-                            <button type="button">
+                            <button type="button" class="add-to-cart">
                                 Add to Cart
                             </button>
 
@@ -498,14 +567,17 @@
 
                 <!-- Forza -->
 
-                <article class="store-game-card">
+                <article
+    class="store-game-card"
+    data-name="Forza Horizon"
+    data-price="49.99"
+    data-image="media/images/forza.png"
+    data-platform="xbox"
+>
 
                     <div class="game-image">
 
-                        <img
-                            src="media/images/forza.png"
-                            alt="Forza racing game"
-                        >
+                        <img src="media/images/forza.png" alt="Forza racing game">
 
                         <span class="game-platform">
                             Xbox
@@ -532,7 +604,7 @@
                                 £49.99
                             </p>
 
-                            <button type="button">
+                            <button type="button" class="add-to-cart">
                                 Add to Cart
                             </button>
 
@@ -545,14 +617,17 @@
 
                 <!-- Halo -->
 
-                <article class="store-game-card">
+                <article
+    class="store-game-card"
+    data-name="Halo"
+    data-price="44.99"
+    data-image="media/images/halo.png"
+    data-platform="xbox"
+>
 
                     <div class="game-image">
 
-                        <img
-                            src="media/images/halo.png"
-                            alt="Halo"
-                        >
+                        <img src="media/images/halo.png" alt="Halo">
 
                         <span class="game-platform">
                             Xbox
@@ -579,7 +654,7 @@
                                 £44.99
                             </p>
 
-                            <button type="button">
+                            <button type="button" class="add-to-cart">
                                 Add to Cart
                             </button>
 
@@ -592,14 +667,17 @@
 
                 <!-- Zelda -->
 
-                <article class="store-game-card">
+                <article
+    class="store-game-card"
+    data-name="The Legend of Zelda"
+    data-price="49.99"
+    data-image="media/images/zelda1.png"
+    data-platform="nintendo"
+>
 
                     <div class="game-image">
 
-                        <img
-                            src="media/images/zelda1.png"
-                            alt="The Legend of Zelda"
-                        >
+                        <img src="media/images/zelda1.png" alt="The Legend of Zelda">
 
                         <span class="game-platform">
                             Nintendo
@@ -626,7 +704,7 @@
                                 £49.99
                             </p>
 
-                            <button type="button">
+                            <button type="button" class="add-to-cart">
                                 Add to Cart
                             </button>
 
@@ -639,14 +717,17 @@
 
                 <!-- Zelda 2 -->
 
-                <article class="store-game-card">
+                <article
+    class="store-game-card"
+    data-name="Zelda: Tears of the Kingdom"
+    data-price="59.99"
+    data-image="media/images/zelda2.png"
+    data-platform="nintendo"
+>
 
                     <div class="game-image">
 
-                        <img
-                            src="media/images/zelda2.png"
-                            alt="The Legend of Zelda adventure"
-                        >
+                        <img src="media/images/zelda2.png" alt="The Legend of Zelda adventure">
 
                         <span class="game-platform">
                             Nintendo
@@ -673,7 +754,7 @@
                                 £59.99
                             </p>
 
-                            <button type="button">
+                            <button type="button" class="add-to-cart">
                                 Add to Cart
                             </button>
 
@@ -686,14 +767,17 @@
 
                 <!-- Mario Kart -->
 
-                <article class="store-game-card">
+                <article
+    class="store-game-card"
+    data-name="Mario Kart"
+    data-price="44.99"
+    data-image="media/images/mariok.png"
+    data-platform="nintendo"
+>
 
                     <div class="game-image">
 
-                        <img
-                            src="media/images/mariok.png"
-                            alt="Mario Kart"
-                        >
+                        <img src="media/images/mariok.png" alt="Mario Kart">
 
                         <span class="game-platform">
                             Nintendo
@@ -720,7 +804,7 @@
                                 £44.99
                             </p>
 
-                            <button type="button">
+                            <button type="button" class="add-to-cart">
                                 Add to Cart
                             </button>
 
@@ -733,14 +817,17 @@
 
                 <!-- Mario Galaxy -->
 
-                <article class="store-game-card">
+                <article
+    class="store-game-card"
+    data-name="Super Mario Galaxy"
+    data-price="39.99"
+    data-image="media/images/galaxy.png"
+    data-platform="nintendo"
+>
 
                     <div class="game-image">
 
-                        <img
-                            src="media/images/galaxy.png"
-                            alt="Super Mario Galaxy"
-                        >
+                        <img src="media/images/galaxy.png" alt="Super Mario Galaxy">
 
                         <span class="game-platform">
                             Nintendo
@@ -767,7 +854,7 @@
                                 £39.99
                             </p>
 
-                            <button type="button">
+                            <button type="button" class="add-to-cart">
                                 Add to Cart
                             </button>
 
@@ -780,14 +867,17 @@
 
                 <!-- Resident Evil -->
 
-                <article class="store-game-card">
+                <article
+    class="store-game-card"
+    data-name="Resident Evil"
+    data-price="39.99"
+    data-image="media/images/resident.png"
+    data-platform="multi-platform"
+>
 
                     <div class="game-image">
 
-                        <img
-                            src="media/images/resident.png"
-                            alt="Resident Evil"
-                        >
+                        <img src="media/images/resident.png" alt="Resident Evil">
 
                         <span class="game-platform">
                             Multi-platform
@@ -814,7 +904,7 @@
                                 £39.99
                             </p>
 
-                            <button type="button">
+                            <button type="button" class="add-to-cart">
                                 Add to Cart
                             </button>
 
@@ -827,14 +917,17 @@
 
                 <!-- Metal Gear Solid 3 -->
 
-                <article class="store-game-card">
+                <article
+    class="store-game-card"
+    data-name="Metal Gear Solid 3"
+    data-price="59.99"
+    data-image="media/images/mgs3.png"
+    data-platform="multi-platform"
+>
 
                     <div class="game-image">
 
-                        <img
-                            src="media/images/mgs3.png"
-                            alt="Metal Gear Solid 3"
-                        >
+                        <img src="media/images/mgs3.png" alt="Metal Gear Solid 3">
 
                         <span class="game-platform">
                             Multi-platform
@@ -861,7 +954,7 @@
                                 £59.99
                             </p>
 
-                            <button type="button">
+                            <button type="button" class="add-to-cart">
                                 Add to Cart
                             </button>
 
@@ -874,14 +967,17 @@
 
                 <!-- Donkey Kong -->
 
-                <article class="store-game-card">
+                <article
+    class="store-game-card"
+    data-name="Donkey Kong"
+    data-price="39.99"
+    data-image="media/images/donk.png"
+    data-platform="nintendo"
+>
 
                     <div class="game-image">
 
-                        <img
-                            src="media/images/donk.png"
-                            alt="Donkey Kong"
-                        >
+                        <img src="media/images/donk.png" alt="Donkey Kong">
 
                         <span class="game-platform">
                             Nintendo
@@ -908,7 +1004,7 @@
                                 £39.99
                             </p>
 
-                            <button type="button">
+                            <button type="button" class="add-to-cart">
                                 Add to Cart
                             </button>
 
@@ -921,14 +1017,17 @@
 
                 <!-- Assassin-style image -->
 
-                <article class="store-game-card">
+                <article
+    class="store-game-card"
+    data-name="Assassin's Adventure"
+    data-price="44.99"
+    data-image="media/images/assa.png"
+    data-platform="multi-platform"
+>
 
                     <div class="game-image">
 
-                        <img
-                            src="media/images/assa.png"
-                            alt="Assassin action adventure game"
-                        >
+                        <img src="media/images/assa.png" alt="Assassin action adventure game">
 
                         <span class="game-platform">
                             Multi-platform
@@ -955,7 +1054,7 @@
                                 £44.99
                             </p>
 
-                            <button type="button">
+                            <button type="button" class="add-to-cart">
                                 Add to Cart
                             </button>
 
@@ -1008,8 +1107,7 @@
 
                 <div class="footer-brand">
 
-                    <img src="media/images/space.png"
-                         alt="Game Universe logo">
+                    <img src="media/images/space.png" alt="Game Universe logo">
 
                     <h2>Game Universe</h2>
 
@@ -1076,6 +1174,8 @@
         </div>
 
     </footer>
+
+    <script src="script/script.js"></script>
 
 </body>
 
