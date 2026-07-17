@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style/style.css">
+
+    <title>Contact Us | Game Universe</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            Game Universe
+
+            <img src="media/images/space.png"
+                 alt="Game Universe logo">
+        </a>
+
+        <input type="checkbox" id="nav-box">
+
+        <label for="nav-box"
+               class="nav-btn"
+               aria-label="Open navigation menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </label>
+
+        <nav class="navbar">
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="games.html">Games</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li>
+                    <a href="contact.html" class="active">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- Contact hero -->
+
+        <section class="contact-hero">
+
+            <div class="contact-hero-content">
+
+                <p class="section-label">
+                    Get in touch
+                </p>
+
+                <h1>Contact Game Universe</h1>
+
+                <p>
+                    Have a question, suggestion or game recommendation?
+                    Send us a message and become part of our gaming universe.
+                </p>
+
+                <a href="#contact-form" class="hero-btn">
+                    Send a Message
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Contact information and form -->
+
+        <section class="contact-section" id="contact-form">
+
+            <div class="contact-info">
+
+                <p class="section-label">
+                    Contact information
+                </p>
+
+                <h2>Let’s Start a Conversation</h2>
+
+                <p class="contact-intro">
+                    Use the contact form to ask a question, share feedback or
+                    recommend a game for Game Universe.
+                </p>
+
+                <div class="contact-details">
+
+                    <article class="contact-detail-card">
+
+                        <span class="contact-icon">✉️</span>
+
+                        <div>
+                            <h3>Email</h3>
+
+                            <p>hello@gameuniverse.com</p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="contact-detail-card">
+
+                        <span class="contact-icon">📍</span>
+
+                        <div>
+                            <h3>Location</h3>
+
+                            <p>London, United Kingdom</p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="contact-detail-card">
+
+                        <span class="contact-icon">🕒</span>
+
+                        <div>
+                            <h3>Support Hours</h3>
+
+                            <p>Monday–Friday, 9:00–18:00</p>
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="contact-socials">
+
+                    <h3>Follow Our Universe</h3>
+
+                    <div class="social-buttons">
+
+                        <a href="#" aria-label="Instagram">
+                            Instagram
+                        </a>
+
+                        <a href="#" aria-label="YouTube">
+                            YouTube
+                        </a>
+
+                        <a href="#" aria-label="Discord">
+                            Discord
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Contact form -->
+
+            <div class="contact-form-container">
+
+                <form class="contact-form" action="#" method="post">
+
+                    <div class="form-heading">
+
+                        <p class="section-label">
+                            Send a message
+                        </p>
+
+                        <h2>How Can We Help?</h2>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="first-name">
+                                First name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="first-name"
+                                name="first-name"
+                                placeholder="Your first name"
+                                autocomplete="given-name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="last-name">
+                                Last name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="last-name"
+                                name="last-name"
+                                placeholder="Your last name"
+                                autocomplete="family-name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="subject">
+                            Subject
+                        </label>
+
+                        <select id="subject"
+                                name="subject"
+                                required>
+
+                            <option value="" selected disabled>
+                                Choose a subject
+                            </option>
+
+                            <option value="general-question">
+                                General question
+                            </option>
+
+                            <option value="game-recommendation">
+                                Game recommendation
+                            </option>
+
+                            <option value="website-feedback">
+                                Website feedback
+                            </option>
+
+                            <option value="support">
+                                Support
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="7"
+                            placeholder="Write your message..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="checkbox-group">
+
+                        <input
+                            type="checkbox"
+                            id="privacy"
+                            name="privacy"
+                            required
+                        >
+
+                        <label for="privacy">
+                            I agree that Game Universe may use my information
+                            to reply to this message.
+                        </label>
+
+                    </div>
+
+
+                    <button type="submit"
+                            class="contact-submit-btn">
+
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- FAQ -->
+
+        <section class="contact-faq">
+
+            <div class="faq-heading">
+
+                <p class="section-label">
+                    Need a quick answer?
+                </p>
+
+                <h2>Frequently Asked Questions</h2>
+
+                <p>
+                    Here are answers to some common questions about
+                    Game Universe.
+                </p>
+
+            </div>
+
+
+            <div class="faq-container">
+
+                <article class="faq-card">
+
+                    <h3>
+                        Can I buy games directly from this website?
+                    </h3>
+
+                    <p>
+                        The current website is a demonstration project.
+                        Shopping-cart and payment features can be added later
+                        using JavaScript and a backend system.
+                    </p>
+
+                </article>
+
+
+                <article class="faq-card">
+
+                    <h3>
+                        Which gaming platforms do you cover?
+                    </h3>
+
+                    <p>
+                        Game Universe covers PlayStation, Xbox, Nintendo and
+                        PC games.
+                    </p>
+
+                </article>
+
+
+                <article class="faq-card">
+
+                    <h3>
+                        Can I recommend a game?
+                    </h3>
+
+                    <p>
+                        Yes. Select “Game recommendation” in the contact form
+                        and tell us which game you would like to see.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Contact call to action -->
+
+        <section class="contact-cta">
+
+            <div class="contact-cta-content">
+
+                <p class="section-label">
+                    Keep exploring
+                </p>
+
+                <h2>Looking for Your Next Game?</h2>
+
+                <p>
+                    Explore our collection of featured games and discover your
+                    next adventure.
+                </p>
+
+                <a href="games.html" class="hero-btn">
+                    Browse Games
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-logo">
+
+                <div class="footer-brand">
+
+                    <img src="media/images/space.png"
+                         alt="Game Universe logo">
+
+                    <h2>Game Universe</h2>
+
+                </div>
+
+                <p>
+                    Discover games, reviews, news and unforgettable adventures
+                    from every major gaming platform.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Platforms</h3>
+
+                <ul>
+                    <li><a href="#">PlayStation</a></li>
+                    <li><a href="#">Xbox</a></li>
+                    <li><a href="#">Nintendo</a></li>
+                    <li><a href="#">PC Gaming</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Follow Us</h3>
+
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">TikTok</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Game Universe. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

@@ -11,7 +11,9 @@
 
 <body>
     <header class="header">
-        <a href="index.html" class="logo">Game Universe</a>
+        <a href="index.html" class="logo">Game Universe
+            <img src="media/images/space.png" alt="Game Universe Logo">
+        </a>
 
         <!-- Mobile menu checkbox -->
         <input type="checkbox" id="nav-box">
@@ -34,22 +36,34 @@
         </nav>
     </header>
 
-    <div id="ps1">
-        <video autoplay muted loop>
+    <section id="ps1">
+
+        <video autoplay muted loop playsinline>
             <source src="media/video/ps1.mp4" type="video/mp4">
         </video>
-    </div>
+    
+        <div class="hero-overlay"></div>
+    
+        <div class="hero-content">
+            <h1>Welcome to Game Universe</h1>
+    
+            <p>
+                Where every choice unlocks a new adventure. Discover the latest
+                releases, timeless classics, and everything in between, all in one
+                universe built for gamers.
+            </p>
+    
+            <div class="hero-buttons">
+                <a href="games.html" class="hero-btn">Explore Games</a>
+                <a href="#top-game" class="hero-btn secondary-btn">Top Rated</a>
+            </div>
+        </div>
+    
+    </section>
 
-    <div id="section1">
-        <h2>Welcome to Game Universe</h2>
-    </div>
-    <div id="section2">
-        <p>Where every choice unlocks a new adventure. Discover the latest releases, timeless classics, and everything
-            in between all in one universe built for gamers.</p>
-    </div>
 
 <section class="games">
-    <h2>Best rated Games on The Universe</h2>
+    <h2 id="top-game"> Best rated Games on The Universe</h2>
     <div class="game-list">
         <article class="game-card">
             <img src="media/images/tlou.png" alt="The Last of Us par1 ps5">
@@ -79,6 +93,149 @@
 
 </section>
 
+<section class="about">
+
+    <div class="about-text">
+        <p class="section-label">About us</p>
+
+        <h2>About Game Universe</h2>
+
+        <p>
+            Game Universe is a place created for gamers who want to discover
+            new releases, classic titles, reviews and gaming news.
+        </p>
+
+        <p>
+            Our goal is to bring different gaming platforms together in one
+            universe and help players find their next adventure.
+        </p>
+
+        <div class="about-features">
+            <span>✓ Game reviews</span>
+            <span>✓ Latest releases</span>
+            <span>✓ Gaming news</span>
+            <span>✓ PlayStation, Xbox and PC</span>
+        </div>
+
+        <a href="about.html" class="about-btn">Learn More</a>
+    </div>
+
+    <div class="about-video-box">
+        <video id="game-pad" autoplay muted loop playsinline>
+            <source src="media/video/pad.mp4" type="video/mp4">
+        </video>
+    </div>
+
+</section>
+
+
+<section class="what-we-do">
+
+    <div class="what-we-do-heading">
+        <p class="section-label">Our services</p>
+        <h2>What We Do</h2>
+
+        <p>
+            We help gamers explore titles, discover useful information and
+            stay connected with the gaming world.
+        </p>
+    </div>
+
+    <div class="services-container">
+
+        <article class="service-card">
+            <span class="service-icon">🎮</span>
+            <h3>Discover Games</h3>
+            <p>
+                Explore popular games, timeless classics and upcoming releases
+                from different platforms.
+            </p>
+        </article>
+
+        <article class="service-card">
+            <span class="service-icon">⭐</span>
+            <h3>Reviews and Ratings</h3>
+            <p>
+                Read clear game descriptions, ratings and recommendations
+                before choosing what to play.
+            </p>
+        </article>
+
+        <article class="service-card">
+            <span class="service-icon">📰</span>
+            <h3>Gaming News</h3>
+            <p>
+                Stay informed about new releases, updates and important
+                developments from the gaming industry.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-logo">
+            <h2>🚀 Game Universe</h2>
+
+            <p>
+                Discover the best games, reviews, news and
+                gaming content from every platform.
+            </p>
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Platforms</h3>
+
+            <ul>
+                <li><a href="#">PlayStation</a></li>
+                <li><a href="#">Xbox</a></li>
+                <li><a href="#">Nintendo</a></li>
+                <li><a href="#">PC Gaming</a></li>
+            </ul>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Follow Us</h3>
+
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">YouTube</a></li>
+                <li><a href="#">Discord</a></li>
+                <li><a href="#">TikTok</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Game Universe. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
 </body>
 
 </html>
