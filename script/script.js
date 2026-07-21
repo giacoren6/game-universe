@@ -2,12 +2,12 @@
 
 /* =========================================
    GAME UNIVERSE
-   Search, filters and shopping cart
+   Search, platform filters and shopping cart
 ========================================= */
 
 
 /* =========================================
-   ELEMENTS
+   SELECT HTML ELEMENTS
 ========================================= */
 
 const cartButton = document.querySelector("#cart-button");
@@ -22,30 +22,37 @@ const cartTotalElement = document.querySelector("#cart-total");
 const clearCartButton = document.querySelector("#clear-cart");
 const checkoutButton = document.querySelector("#checkout-button");
 
-const addToCartButtons =
-    document.querySelectorAll(".add-to-cart");
+const addToCartButtons = document.querySelectorAll(
+    ".add-to-cart"
+);
 
-const gameCards =
-    document.querySelectorAll(".store-game-card");
+const gameCards = document.querySelectorAll(
+    ".store-game-card"
+);
 
-const searchInput =
-    document.querySelector("#game-search");
+const searchInput = document.querySelector(
+    "#game-search"
+);
 
-const searchButton =
-    document.querySelector(".game-search button");
+const searchButton = document.querySelector(
+    ".game-search button"
+);
 
-const filterButtons =
-    document.querySelectorAll(".game-filters button");
+const filterButtons = document.querySelectorAll(
+    ".game-filters button"
+);
 
-const mobileMenuCheckbox =
-    document.querySelector("#nav-box");
+const mobileMenuCheckbox = document.querySelector(
+    "#nav-box"
+);
 
-const navigationLinks =
-    document.querySelectorAll(".navbar a");
+const navigationLinks = document.querySelectorAll(
+    ".navbar a"
+);
 
 
 /* =========================================
-   CART DATA
+   CART VARIABLES
 ========================================= */
 
 const CART_STORAGE_KEY = "gameUniverseCart";
@@ -61,8 +68,9 @@ let activePlatform = "all";
 
 function loadCart() {
     try {
-        const savedCart =
-            localStorage.getItem(CART_STORAGE_KEY);
+        const savedCart = localStorage.getItem(
+            CART_STORAGE_KEY
+        );
 
         if (!savedCart) {
             return [];
@@ -76,7 +84,7 @@ function loadCart() {
 
         return parsedCart;
     } catch (error) {
-        console.error("Could not load the cart:", error);
+        console.error("Could not load cart:", error);
 
         return [];
     }
@@ -90,7 +98,7 @@ function saveCart() {
             JSON.stringify(cart)
         );
     } catch (error) {
-        console.error("Could not save the cart:", error);
+        console.error("Could not save cart:", error);
 
         showToast(
             "The cart could not be saved.",
@@ -101,7 +109,7 @@ function saveCart() {
 
 
 /* =========================================
-   CART OPEN AND CLOSE
+   OPEN AND CLOSE CART
 ========================================= */
 
 function openCart() {
@@ -110,11 +118,17 @@ function openCart() {
     }
 
     cartPanel.classList.add("cart-panel-open");
-    cartOverlay.classList.add("cart-overlay-visible");
+
+    cartOverlay.classList.add(
+        "cart-overlay-visible"
+    );
 
     document.body.classList.add("cart-open");
 
-    cartPanel.setAttribute("aria-hidden", "false");
+    cartPanel.setAttribute(
+        "aria-hidden",
+        "false"
+    );
 }
 
 
@@ -124,16 +138,22 @@ function closeCart() {
     }
 
     cartPanel.classList.remove("cart-panel-open");
-    cartOverlay.classList.remove("cart-overlay-visible");
+
+    cartOverlay.classList.remove(
+        "cart-overlay-visible"
+    );
 
     document.body.classList.remove("cart-open");
 
-    cartPanel.setAttribute("aria-hidden", "true");
+    cartPanel.setAttribute(
+        "aria-hidden",
+        "true"
+    );
 }
 
 
 /* =========================================
-   GAME DATA
+   CREATE GAME INFORMATION
 ========================================= */
 
 function getGameFromCard(gameCard) {
@@ -142,16 +162,21 @@ function getGameFromCard(gameCard) {
     }
 
     const name = gameCard.dataset.name;
-    const price = Number(gameCard.dataset.price);
+
+    const price = Number(
+        gameCard.dataset.price
+    );
+
     const image = gameCard.dataset.image;
-    const platform = gameCard.dataset.platform;
+
+    const platform =
+        gameCard.dataset.platform;
 
     if (
         !name ||
         !image ||
         !platform ||
-        Number.isNaN(price) ||
-        price < 0
+        Number.isNaN(price)
     ) {
         console.error(
             "Invalid game information:",
@@ -163,10 +188,10 @@ function getGameFromCard(gameCard) {
 
     return {
         id: createGameId(name),
-        name,
-        price,
-        image,
-        platform,
+        name: name,
+        price: price,
+        image: image,
+        platform: platform,
         quantity: 1
     };
 }
@@ -182,12 +207,14 @@ function createGameId(name) {
 
 
 /* =========================================
-   ADD TO CART
+   ADD GAME TO CART
 ========================================= */
 
 function addGameToCart(game) {
     const existingGame = cart.find(
-        (cartGame) => cartGame.id === game.id
+        (cartGame) => {
+            return cartGame.id === game.id;
+        }
     );
 
     if (existingGame) {
@@ -207,8 +234,9 @@ function addGameToCart(game) {
 
 
 function handleAddToCart(button) {
-    const gameCard =
-        button.closest(".store-game-card");
+    const gameCard = button.closest(
+        ".store-game-card"
+    );
 
     const game = getGameFromCard(gameCard);
 
@@ -223,22 +251,29 @@ function handleAddToCart(button) {
 
     addGameToCart(game);
 
-    const originalText = button.textContent;
+    const originalText =
+        button.textContent.trim();
 
     button.textContent = "Added ✓";
+
     button.classList.add("game-added");
+
     button.disabled = true;
 
     window.setTimeout(() => {
         button.textContent = originalText;
-        button.classList.remove("game-added");
+
+        button.classList.remove(
+            "game-added"
+        );
+
         button.disabled = false;
     }, 1000);
 }
 
 
 /* =========================================
-   REMOVE AND QUANTITY
+   REMOVE GAME
 ========================================= */
 
 function removeGameFromCart(gameId) {
@@ -262,9 +297,15 @@ function removeGameFromCart(gameId) {
 }
 
 
+/* =========================================
+   CHANGE QUANTITY
+========================================= */
+
 function changeGameQuantity(gameId, amount) {
     const game = cart.find(
-        (cartGame) => cartGame.id === gameId
+        (cartGame) => {
+            return cartGame.id === gameId;
+        }
     );
 
     if (!game) {
@@ -275,6 +316,7 @@ function changeGameQuantity(gameId, amount) {
 
     if (game.quantity <= 0) {
         removeGameFromCart(gameId);
+
         return;
     }
 
@@ -284,7 +326,7 @@ function changeGameQuantity(gameId, amount) {
 
 
 /* =========================================
-   CART TOTALS
+   CALCULATE TOTAL
 ========================================= */
 
 function calculateCartTotals() {
@@ -306,10 +348,13 @@ function calculateCartTotals() {
 
 
 function formatPrice(price) {
-    return new Intl.NumberFormat("en-GB", {
-        style: "currency",
-        currency: "GBP"
-    }).format(price);
+    return new Intl.NumberFormat(
+        "en-GB",
+        {
+            style: "currency",
+            currency: "GBP"
+        }
+    ).format(price);
 }
 
 
@@ -331,7 +376,7 @@ function formatPlatform(platform) {
 
 
 /* =========================================
-   RENDER CART
+   DISPLAY CART
 ========================================= */
 
 function renderCart() {
@@ -340,11 +385,6 @@ function renderCart() {
     if (cartCountElement) {
         cartCountElement.textContent =
             totals.quantity;
-
-        cartCountElement.setAttribute(
-            "aria-label",
-            `${totals.quantity} games in cart`
-        );
     }
 
     if (cartTotalElement) {
@@ -365,17 +405,14 @@ function renderCart() {
         return;
     }
 
-    const cartFragment =
-        document.createDocumentFragment();
-
     cart.forEach((game) => {
         const cartItem =
             createCartItem(game);
 
-        cartFragment.appendChild(cartItem);
+        cartItemsContainer.appendChild(
+            cartItem
+        );
     });
-
-    cartItemsContainer.appendChild(cartFragment);
 
     updateCheckoutButton();
 }
@@ -384,13 +421,16 @@ function renderCart() {
 function renderEmptyCart() {
     cartItemsContainer.innerHTML = `
         <div class="empty-cart">
-            <span aria-hidden="true">🎮</span>
+
+            <span aria-hidden="true">
+                🎮
+            </span>
 
             <h3>Your cart is empty</h3>
 
             <p>
-                Add some games and begin your next
-                adventure.
+                Add some games and begin
+                your next adventure.
             </p>
 
             <button
@@ -399,6 +439,7 @@ function renderEmptyCart() {
             >
                 Continue Shopping
             </button>
+
         </div>
     `;
 
@@ -421,6 +462,7 @@ function createCartItem(game) {
         document.createElement("article");
 
     cartItem.className = "cart-item";
+
     cartItem.dataset.cartId = game.id;
 
     cartItem.innerHTML = `
@@ -432,7 +474,9 @@ function createCartItem(game) {
 
         <div class="cart-item-info">
 
-            <h3>${escapeHTML(game.name)}</h3>
+            <h3>
+                ${escapeHTML(game.name)}
+            </h3>
 
             <p class="cart-item-platform">
                 ${escapeHTML(
@@ -449,23 +493,19 @@ function createCartItem(game) {
                 <button
                     type="button"
                     class="decrease-quantity"
-                    aria-label="Decrease quantity of ${escapeHTML(
-                        game.name
-                    )}"
+                    aria-label="Decrease quantity"
                 >
                     −
                 </button>
 
-                <span aria-label="Quantity">
+                <span>
                     ${game.quantity}
                 </span>
 
                 <button
                     type="button"
                     class="increase-quantity"
-                    aria-label="Increase quantity of ${escapeHTML(
-                        game.name
-                    )}"
+                    aria-label="Increase quantity"
                 >
                     +
                 </button>
@@ -474,9 +514,11 @@ function createCartItem(game) {
 
             <p class="cart-item-subtotal">
                 Subtotal:
+
                 <strong>
                     ${formatPrice(
-                        game.price * game.quantity
+                        game.price *
+                        game.quantity
                     )}
                 </strong>
             </p>
@@ -486,9 +528,7 @@ function createCartItem(game) {
         <button
             type="button"
             class="remove-cart-item"
-            aria-label="Remove ${escapeHTML(
-                game.name
-            )} from the cart"
+            aria-label="Remove game"
         >
             &times;
         </button>
@@ -509,17 +549,34 @@ function createCartItem(game) {
             ".remove-cart-item"
         );
 
-    decreaseButton.addEventListener("click", () => {
-        changeGameQuantity(game.id, -1);
-    });
+    decreaseButton.addEventListener(
+        "click",
+        () => {
+            changeGameQuantity(
+                game.id,
+                -1
+            );
+        }
+    );
 
-    increaseButton.addEventListener("click", () => {
-        changeGameQuantity(game.id, 1);
-    });
+    increaseButton.addEventListener(
+        "click",
+        () => {
+            changeGameQuantity(
+                game.id,
+                1
+            );
+        }
+    );
 
-    removeButton.addEventListener("click", () => {
-        removeGameFromCart(game.id);
-    });
+    removeButton.addEventListener(
+        "click",
+        () => {
+            removeGameFromCart(
+                game.id
+            );
+        }
+    );
 
     return cartItem;
 }
@@ -530,7 +587,8 @@ function updateCheckoutButton() {
         return;
     }
 
-    checkoutButton.disabled = cart.length === 0;
+    checkoutButton.disabled =
+        cart.length === 0;
 }
 
 
@@ -549,7 +607,7 @@ function clearCart() {
     }
 
     const confirmed = window.confirm(
-        "Do you want to remove every game from your cart?"
+        "Remove every game from the cart?"
     );
 
     if (!confirmed) {
@@ -562,14 +620,14 @@ function clearCart() {
     renderCart();
 
     showToast(
-        "Your shopping cart has been cleared.",
+        "Your cart has been cleared.",
         "info"
     );
 }
 
 
 /* =========================================
-   CHECKOUT
+   DEMONSTRATION CHECKOUT
 ========================================= */
 
 function checkout() {
@@ -585,25 +643,13 @@ function checkout() {
     const totals = calculateCartTotals();
 
     const confirmed = window.confirm(
-        `Confirm your order of ` +
-        `${totals.quantity} game(s) for ` +
-        `${formatPrice(totals.price)}?`
+        `Confirm ${totals.quantity} game(s) ` +
+        `for ${formatPrice(totals.price)}?`
     );
 
     if (!confirmed) {
         return;
     }
-
-    /*
-     This is a demonstration checkout.
-
-     Do not collect real card information directly
-     with basic HTML and JavaScript.
-
-     A real website should use a secure payment
-     provider such as Stripe or PayPal together
-     with a backend server.
-    */
 
     showOrderSuccess(totals);
 
@@ -617,7 +663,9 @@ function checkout() {
 
 function showOrderSuccess(totals) {
     const orderNumber =
-        `GU-${Date.now().toString().slice(-8)}`;
+        `GU-${Date.now()
+            .toString()
+            .slice(-8)}`;
 
     const successModal =
         document.createElement("div");
@@ -630,11 +678,13 @@ function showOrderSuccess(totals) {
             class="order-success-modal"
             role="dialog"
             aria-modal="true"
-            aria-labelledby="order-success-title"
         >
-            <span class="success-icon">✓</span>
 
-            <h2 id="order-success-title">
+            <span class="success-icon">
+                ✓
+            </span>
+
+            <h2>
                 Purchase Successful
             </h2>
 
@@ -644,22 +694,33 @@ function showOrderSuccess(totals) {
             </p>
 
             <div class="order-summary">
+
                 <p>
                     <span>Order number</span>
-                    <strong>${orderNumber}</strong>
+
+                    <strong>
+                        ${orderNumber}
+                    </strong>
                 </p>
 
                 <p>
                     <span>Games</span>
-                    <strong>${totals.quantity}</strong>
+
+                    <strong>
+                        ${totals.quantity}
+                    </strong>
                 </p>
 
                 <p>
                     <span>Total</span>
+
                     <strong>
-                        ${formatPrice(totals.price)}
+                        ${formatPrice(
+                            totals.price
+                        )}
                     </strong>
                 </p>
+
             </div>
 
             <p class="demo-payment-message">
@@ -673,32 +734,44 @@ function showOrderSuccess(totals) {
             >
                 Continue
             </button>
+
         </div>
     `;
 
-    document.body.appendChild(successModal);
-    document.body.classList.add("cart-open");
+    document.body.appendChild(
+        successModal
+    );
+
+    document.body.classList.add(
+        "cart-open"
+    );
 
     const closeButton =
         successModal.querySelector(
             ".close-success-modal"
         );
 
-    function removeSuccessModal() {
+    function removeModal() {
         successModal.remove();
-        document.body.classList.remove("cart-open");
+
+        document.body.classList.remove(
+            "cart-open"
+        );
     }
 
     closeButton.addEventListener(
         "click",
-        removeSuccessModal
+        removeModal
     );
 
     successModal.addEventListener(
         "click",
         (event) => {
-            if (event.target === successModal) {
-                removeSuccessModal();
+            if (
+                event.target ===
+                successModal
+            ) {
+                removeModal();
             }
         }
     );
@@ -706,7 +779,7 @@ function showOrderSuccess(totals) {
 
 
 /* =========================================
-   SEARCH AND FILTERS
+   SEARCH AND EXACT PLATFORM FILTERING
 ========================================= */
 
 function filterGames() {
@@ -725,39 +798,62 @@ function filterGames() {
     gameCards.forEach((gameCard) => {
         const gameName =
             gameCard.dataset.name
-                ?.toLowerCase() || "";
+                ?.trim()
+                .toLowerCase() || "";
 
         const platform =
             gameCard.dataset.platform
-                ?.toLowerCase() || "";
+                ?.trim()
+                .toLowerCase() || "";
 
         const category =
             gameCard
-                .querySelector(".game-category")
+                .querySelector(
+                    ".game-category"
+                )
                 ?.textContent
                 .trim()
                 .toLowerCase() || "";
 
         const description =
             gameCard
-                .querySelector(".game-description")
+                .querySelector(
+                    ".game-description"
+                )
                 ?.textContent
                 .trim()
                 .toLowerCase() || "";
 
+        /*
+        Search matches the game name,
+        category or description.
+        */
+
         const matchesSearch =
             gameName.includes(searchText) ||
-            platform.includes(searchText) ||
             category.includes(searchText) ||
             description.includes(searchText);
 
+        /*
+        Exact platform filtering:
+
+        All          = every game
+        PlayStation  = only playstation
+        Xbox         = only xbox
+        Nintendo     = only nintendo
+        PC           = only pc
+
+        Games marked multi-platform appear
+        only when All is selected.
+        */
+
         const matchesPlatform =
             activePlatform === "all" ||
-            platform === activePlatform ||
-            platform === "multi-platform";
+            platform === activePlatform;
 
         const shouldDisplay =
-            matchesSearch && matchesPlatform;
+            matchesSearch &&
+            matchesPlatform;
 
         gameCard.classList.toggle(
             "game-hidden",
@@ -769,42 +865,58 @@ function filterGames() {
         }
     });
 
-    renderSearchMessage(visibleGames);
+    renderSearchMessage(
+        visibleGames
+    );
 }
 
 
-function renderSearchMessage(visibleGames) {
+/* =========================================
+   NO SEARCH RESULTS
+========================================= */
+
+function renderSearchMessage(
+    visibleGames
+) {
     const gamesGrid =
-        document.querySelector(".games-grid");
+        document.querySelector(
+            ".games-grid"
+        );
 
     if (!gamesGrid) {
         return;
     }
 
-    let noResultsMessage =
+    let message =
         document.querySelector(
             "#no-games-message"
         );
 
     if (visibleGames === 0) {
-        if (!noResultsMessage) {
-            noResultsMessage =
-                document.createElement("div");
+        if (!message) {
+            message =
+                document.createElement(
+                    "div"
+                );
 
-            noResultsMessage.id =
+            message.id =
                 "no-games-message";
 
-            noResultsMessage.className =
+            message.className =
                 "no-games-message";
 
-            noResultsMessage.innerHTML = `
-                <span aria-hidden="true">🔍</span>
+            message.innerHTML = `
+                <span aria-hidden="true">
+                    🔍
+                </span>
 
-                <h3>No games found</h3>
+                <h3>
+                    No games found
+                </h3>
 
                 <p>
-                    Try another game name,
-                    category or platform.
+                    Try another game name
+                    or select another platform.
                 </p>
 
                 <button
@@ -816,11 +928,11 @@ function renderSearchMessage(visibleGames) {
             `;
 
             gamesGrid.appendChild(
-                noResultsMessage
+                message
             );
 
             const resetButton =
-                noResultsMessage.querySelector(
+                message.querySelector(
                     "#reset-game-search"
                 );
 
@@ -829,8 +941,8 @@ function renderSearchMessage(visibleGames) {
                 resetGameSearch
             );
         }
-    } else if (noResultsMessage) {
-        noResultsMessage.remove();
+    } else if (message) {
+        message.remove();
     }
 }
 
@@ -842,15 +954,18 @@ function resetGameSearch() {
         searchInput.value = "";
     }
 
-    filterButtons.forEach((button) => {
-        const isAllButton =
-            button.dataset.filter === "all";
+    filterButtons.forEach(
+        (button) => {
+            const isAllButton =
+                button.dataset.filter ===
+                "all";
 
-        button.classList.toggle(
-            "filter-active",
-            isAllButton
-        );
-    });
+            button.classList.toggle(
+                "filter-active",
+                isAllButton
+            );
+        }
+    );
 
     filterGames();
 }
@@ -860,7 +975,10 @@ function resetGameSearch() {
    TOAST NOTIFICATIONS
 ========================================= */
 
-function showToast(message, type = "info") {
+function showToast(
+    message,
+    type = "info"
+) {
     let toastContainer =
         document.querySelector(
             "#toast-container"
@@ -868,9 +986,13 @@ function showToast(message, type = "info") {
 
     if (!toastContainer) {
         toastContainer =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
-        toastContainer.id = "toast-container";
+        toastContainer.id =
+            "toast-container";
+
         toastContainer.className =
             "toast-container";
 
@@ -882,14 +1004,17 @@ function showToast(message, type = "info") {
     const toast =
         document.createElement("div");
 
-    toast.className = `toast toast-${type}`;
+    toast.className =
+        `toast toast-${type}`;
 
     toast.innerHTML = `
         <span class="toast-symbol">
             ${getToastIcon(type)}
         </span>
 
-        <p>${escapeHTML(message)}</p>
+        <p>
+            ${escapeHTML(message)}
+        </p>
 
         <button
             type="button"
@@ -902,15 +1027,20 @@ function showToast(message, type = "info") {
     toastContainer.appendChild(toast);
 
     requestAnimationFrame(() => {
-        toast.classList.add("toast-visible");
+        toast.classList.add(
+            "toast-visible"
+        );
     });
 
     const closeButton =
         toast.querySelector("button");
 
-    closeButton.addEventListener("click", () => {
-        removeToast(toast);
-    });
+    closeButton.addEventListener(
+        "click",
+        () => {
+            removeToast(toast);
+        }
+    );
 
     window.setTimeout(() => {
         removeToast(toast);
@@ -925,16 +1055,22 @@ function getToastIcon(type) {
         info: "i"
     };
 
-    return icons[type] || icons.info;
+    return icons[type] ||
+        icons.info;
 }
 
 
 function removeToast(toast) {
-    if (!toast || !toast.isConnected) {
+    if (
+        !toast ||
+        !toast.isConnected
+    ) {
         return;
     }
 
-    toast.classList.remove("toast-visible");
+    toast.classList.remove(
+        "toast-visible"
+    );
 
     window.setTimeout(() => {
         toast.remove();
@@ -943,7 +1079,7 @@ function removeToast(toast) {
 
 
 /* =========================================
-   SECURITY
+   PROTECT INSERTED TEXT
 ========================================= */
 
 function escapeHTML(value) {
@@ -957,47 +1093,84 @@ function escapeHTML(value) {
 
 
 /* =========================================
-   EVENTS
+   ADD-TO-CART EVENTS
 ========================================= */
 
-addToCartButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-        handleAddToCart(button);
-    });
-});
-
-
-filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-        activePlatform =
-            button.dataset.filter || "all";
-
-        filterButtons.forEach(
-            (filterButton) => {
-                filterButton.classList.remove(
-                    "filter-active"
+addToCartButtons.forEach(
+    (button) => {
+        button.addEventListener(
+            "click",
+            () => {
+                handleAddToCart(
+                    button
                 );
             }
         );
+    }
+);
 
-        button.classList.add("filter-active");
 
-        filterGames();
-    });
-});
+/* =========================================
+   FILTER BUTTON EVENTS
+========================================= */
 
+filterButtons.forEach(
+    (button) => {
+        button.addEventListener(
+            "click",
+            () => {
+                activePlatform =
+                    button.dataset.filter ||
+                    "all";
+
+                filterButtons.forEach(
+                    (filterButton) => {
+                        filterButton
+                            .classList
+                            .remove(
+                                "filter-active"
+                            );
+                    }
+                );
+
+                button.classList.add(
+                    "filter-active"
+                );
+
+                filterGames();
+            }
+        );
+    }
+);
+
+
+/* =========================================
+   SEARCH EVENTS
+========================================= */
 
 if (searchInput) {
+    /*
+    Filter automatically while typing.
+    */
+
     searchInput.addEventListener(
         "input",
         filterGames
     );
 
+    /*
+    Press Escape inside the search box
+    to clear the search.
+    */
+
     searchInput.addEventListener(
         "keydown",
         (event) => {
-            if (event.key === "Escape") {
+            if (
+                event.key === "Escape"
+            ) {
                 searchInput.value = "";
+
                 filterGames();
             }
         }
@@ -1012,6 +1185,10 @@ if (searchButton) {
     );
 }
 
+
+/* =========================================
+   CART EVENTS
+========================================= */
 
 if (cartButton) {
     cartButton.addEventListener(
@@ -1053,6 +1230,10 @@ if (checkoutButton) {
 }
 
 
+/* =========================================
+   KEYBOARD EVENTS
+========================================= */
+
 document.addEventListener(
     "keydown",
     (event) => {
@@ -1063,13 +1244,25 @@ document.addEventListener(
 );
 
 
-navigationLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-        if (mobileMenuCheckbox) {
-            mobileMenuCheckbox.checked = false;
-        }
-    });
-});
+/* =========================================
+   CLOSE MOBILE MENU
+========================================= */
+
+navigationLinks.forEach(
+    (link) => {
+        link.addEventListener(
+            "click",
+            () => {
+                if (
+                    mobileMenuCheckbox
+                ) {
+                    mobileMenuCheckbox
+                        .checked = false;
+                }
+            }
+        );
+    }
+);
 
 
 /* =========================================
@@ -1078,3 +1271,140 @@ navigationLinks.forEach((link) => {
 
 renderCart();
 filterGames();
+
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+const contactForm = document.querySelector("#contact-form");
+
+console.log("Contact JavaScript loaded");
+console.log("Contact form:", contactForm);
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const firstNameInput =
+            document.querySelector("#first-name");
+
+        const firstName =
+            firstNameInput
+                ? firstNameInput.value.trim()
+                : "";
+
+        showContactSuccess(firstName);
+
+        contactForm.reset();
+
+    });
+
+}
+
+
+function showContactSuccess(firstName) {
+
+    const overlay =
+        document.createElement("div");
+
+    overlay.className =
+        "contact-success-overlay";
+
+    const customerName =
+        firstName
+            ? `, ${escapeHTML(firstName)}`
+            : "";
+
+    overlay.innerHTML = `
+        <div class="contact-success-modal">
+
+            <span class="contact-success-icon">
+                ✓
+            </span>
+
+            <h2>
+                Message Sent
+            </h2>
+
+            <p>
+                Thank you${customerName}.
+                Your message has been received.
+            </p>
+
+            <p class="contact-demo-message">
+                This is a demonstration form.
+                No real email has been sent.
+            </p>
+
+            <button
+                class="close-contact-success"
+                type="button"
+            >
+                Continue
+            </button>
+
+        </div>
+    `;
+
+    document.body.appendChild(overlay);
+
+    document.body.style.overflow = "hidden";
+
+    const closeButton =
+        overlay.querySelector(".close-contact-success");
+
+
+    function closeModal() {
+
+        if (!overlay.isConnected) {
+            return;
+        }
+
+        overlay.remove();
+
+        document.body.style.overflow = "";
+
+        document.removeEventListener(
+            "keydown",
+            closeWithEscape
+        );
+
+    }
+
+
+    function closeWithEscape(event) {
+
+        if (event.key === "Escape") {
+            closeModal();
+        }
+
+    }
+
+
+    closeButton.addEventListener(
+        "click",
+        closeModal
+    );
+
+    overlay.addEventListener(
+        "click",
+        function (event) {
+
+            if (event.target === overlay) {
+                closeModal();
+            }
+
+        }
+    );
+
+    document.addEventListener(
+        "keydown",
+        closeWithEscape
+    );
+
+    closeButton.focus();
+
+}

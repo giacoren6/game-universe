@@ -3,239 +3,612 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <link rel="stylesheet" href="style/style.css">
 
-    <title>GameUniverse</title>
+    <title>Game Universe</title>
 </head>
 
 <body>
+
+    <!-- Navbar -->
+
     <header class="header">
-        <a href="index.html" class="logo">Game Universe
-            <img src="media/images/space.png" alt="Game Universe Logo">
+
+        <a href="index.html" class="logo">
+            Game Universe
+
+            <img
+                src="media/images/space.png"
+                alt="Game Universe logo"
+            >
         </a>
 
-        <!-- Mobile menu checkbox -->
         <input type="checkbox" id="nav-box">
 
-        <!-- Hamburger button -->
-        <label for="nav-box" class="nav-btn">
+        <label
+            for="nav-box"
+            class="nav-btn"
+            aria-label="Open navigation menu"
+        >
             <span></span>
             <span></span>
             <span></span>
         </label>
 
-        <!-- Navigation -->
         <nav class="navbar">
+
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="games.html">Games</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="index.html" class="active">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="games.html">
+                        Games
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
             </ul>
+
         </nav>
+
+        <!-- Cart button -->
+
+        <button
+            class="cart-button"
+            id="cart-button"
+            type="button"
+            aria-label="Open shopping cart"
+        >
+            🛒
+
+            <span id="cart-count">
+                0
+            </span>
+        </button>
+
     </header>
 
-    <section id="ps1">
 
-        <video autoplay muted loop playsinline>
-            <source src="media/video/ps1.mp4" type="video/mp4">
-        </video>
-    
-        <div class="hero-overlay"></div>
-    
-        <div class="hero-content">
-            <h1>Welcome to Game Universe</h1>
-    
-            <p>
-                Where every choice unlocks a new adventure. Discover the latest
-                releases, timeless classics, and everything in between, all in one
-                universe built for gamers.
-            </p>
-    
-            <div class="hero-buttons">
-                <a href="games.html" class="hero-btn">Explore Games</a>
-                <a href="#top-game" class="hero-btn secondary-btn">Top Rated</a>
+    <!-- Cart dark overlay -->
+
+    <div
+        class="cart-overlay"
+        id="cart-overlay"
+    ></div>
+
+
+    <!-- Shopping cart -->
+
+    <aside
+        class="cart-panel"
+        id="cart-panel"
+        aria-hidden="true"
+    >
+
+        <div class="cart-header">
+
+            <div>
+                <p class="section-label">
+                    Your collection
+                </p>
+
+                <h2>Shopping Cart</h2>
             </div>
-        </div>
-    
-    </section>
 
+            <button
+                class="close-cart"
+                id="close-cart"
+                type="button"
+                aria-label="Close shopping cart"
+            >
+                &times;
+            </button>
 
-<section class="games">
-    <h2 id="top-game"> Best rated Games on The Universe</h2>
-    <div class="game-list">
-        <article class="game-card">
-            <img src="media/images/tlou.png" alt="The Last of Us par1 ps5">
-            <h3>The Last of Us Part I</h3>
-            <p>Experience the emotional journey of Joel and Ellie in this critically acclaimed action-adventure game.</p>
-            <p>£59.99</p>
-            <button>Buy Now</button>
-        </article>
-
-            <article class="game-card">
-                <img src="media/images/tlou2.png" alt="The Last of Us part2 ps5">
-                <h3>The Last of Us Part II</h3>
-                <p>Continue the story of Ellie in this gripping sequel that explores themes of revenge and redemption.</p>
-                <p>£69.99</p>
-                <button>Buy Now</button>
-            </article>
-
-            <article class="game-card">
-                <img src="media/images/god2.png" alt="God of War Ragnarok ps5">
-                <h3>God of War Ragnarok</h3>
-                <p>Join Kratos and Atreus on their epic journey through Norse mythology in this action-packed adventure.</p>
-                <p>£79.99</p>
-                <button>Buy Now</button>
-            </article>
-        </div>
-    </div>
-
-</section>
-
-<section class="about">
-
-    <div class="about-text">
-        <p class="section-label">About us</p>
-
-        <h2>About Game Universe</h2>
-
-        <p>
-            Game Universe is a place created for gamers who want to discover
-            new releases, classic titles, reviews and gaming news.
-        </p>
-
-        <p>
-            Our goal is to bring different gaming platforms together in one
-            universe and help players find their next adventure.
-        </p>
-
-        <div class="about-features">
-            <span>✓ Game reviews</span>
-            <span>✓ Latest releases</span>
-            <span>✓ Gaming news</span>
-            <span>✓ PlayStation, Xbox and PC</span>
         </div>
 
-        <a href="about.html" class="about-btn">Learn More</a>
-    </div>
 
-    <div class="about-video-box">
-        <video id="game-pad" autoplay muted loop playsinline>
-            <source src="media/video/pad.mp4" type="video/mp4">
-        </video>
-    </div>
-
-</section>
+        <div
+            class="cart-items"
+            id="cart-items"
+        >
+            <!-- JavaScript adds products here -->
+        </div>
 
 
-<section class="what-we-do">
+        <div class="cart-footer">
 
-    <div class="what-we-do-heading">
-        <p class="section-label">Our services</p>
-        <h2>What We Do</h2>
+            <div class="cart-total">
 
-        <p>
-            We help gamers explore titles, discover useful information and
-            stay connected with the gaming world.
-        </p>
-    </div>
+                <span>Total</span>
 
-    <div class="services-container">
+                <strong id="cart-total">
+                    £0.00
+                </strong>
 
-        <article class="service-card">
-            <span class="service-icon">🎮</span>
-            <h3>Discover Games</h3>
+            </div>
+
+            <button
+                class="checkout-button"
+                id="checkout-button"
+                type="button"
+            >
+                Buy Games
+            </button>
+
+            <button
+                class="clear-cart-button"
+                id="clear-cart"
+                type="button"
+            >
+                Clear Cart
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <main>
+
+        <!-- Hero video -->
+
+        <section id="ps1">
+
+            <video autoplay muted loop playsinline>
+
+                <source
+                    src="media/video/ps1.mp4"
+                    type="video/mp4"
+                >
+
+            </video>
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <h1>
+                    Welcome to Game Universe
+                </h1>
+
+                <p>
+                    Where every choice unlocks a new adventure.
+                    Discover the latest releases, timeless classics,
+                    and everything in between, all in one universe
+                    built for gamers.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="games.html"
+                        class="hero-btn"
+                    >
+                        Explore Games
+                    </a>
+
+                    <a
+                        href="#top-game"
+                        class="hero-btn secondary-btn"
+                    >
+                        Top Rated
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Featured games -->
+
+        <section class="games">
+
+            <h2 id="top-game">
+                Best Rated Games in the Universe
+            </h2>
+
+            <div class="game-list">
+
+                <!-- The Last of Us Part I -->
+
+                <article
+                    class="game-card store-game-card"
+                    data-name="The Last of Us Part I"
+                    data-price="59.99"
+                    data-image="media/images/tlou.png"
+                    data-platform="playstation"
+                >
+
+                    <img
+                        src="media/images/tlou.png"
+                        alt="The Last of Us Part I PS5"
+                    >
+
+                    <h3>
+                        The Last of Us Part I
+                    </h3>
+
+                    <p>
+                        Experience the emotional journey of Joel and
+                        Ellie in this critically acclaimed
+                        action-adventure game.
+                    </p>
+
+                    <p class="home-game-price">
+                        £59.99
+                    </p>
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                    >
+                        Add to Cart
+                    </button>
+
+                </article>
+
+
+                <!-- The Last of Us Part II -->
+
+                <article
+                    class="game-card store-game-card"
+                    data-name="The Last of Us Part II"
+                    data-price="69.99"
+                    data-image="media/images/tlou2.png"
+                    data-platform="playstation"
+                >
+
+                    <img
+                        src="media/images/tlou2.png"
+                        alt="The Last of Us Part II PS5"
+                    >
+
+                    <h3>
+                        The Last of Us Part II
+                    </h3>
+
+                    <p>
+                        Continue the story of Ellie in this gripping
+                        sequel that explores themes of revenge and
+                        redemption.
+                    </p>
+
+                    <p class="home-game-price">
+                        £69.99
+                    </p>
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                    >
+                        Add to Cart
+                    </button>
+
+                </article>
+
+
+                <!-- God of War -->
+
+                <article
+                    class="game-card store-game-card"
+                    data-name="God of War Ragnarök"
+                    data-price="79.99"
+                    data-image="media/images/god2.png"
+                    data-platform="playstation"
+                >
+
+                    <img
+                        src="media/images/god2.png"
+                        alt="God of War Ragnarök PS5"
+                    >
+
+                    <h3>
+                        God of War Ragnarök
+                    </h3>
+
+                    <p>
+                        Join Kratos and Atreus on their epic journey
+                        through Norse mythology in this action-packed
+                        adventure.
+                    </p>
+
+                    <p class="home-game-price">
+                        £79.99
+                    </p>
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                    >
+                        Add to Cart
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- About -->
+
+        <section class="about">
+
+            <div class="about-text">
+
+                <p class="section-label">
+                    About us
+                </p>
+
+                <h2>
+                    About Game Universe
+                </h2>
+
+                <p>
+                    Game Universe is a place created for gamers who
+                    want to discover new releases, classic titles,
+                    reviews and gaming news.
+                </p>
+
+                <p>
+                    Our goal is to bring different gaming platforms
+                    together in one universe and help players find
+                    their next adventure.
+                </p>
+
+                <div class="about-features">
+
+                    <span>✓ Game reviews</span>
+
+                    <span>✓ Latest releases</span>
+
+                    <span>✓ Gaming news</span>
+
+                    <span>
+                        ✓ PlayStation, Xbox and PC
+                    </span>
+
+                </div>
+
+                <a
+                    href="about.html"
+                    class="about-btn"
+                >
+                    Learn More
+                </a>
+
+            </div>
+
+
+            <div class="about-video-box">
+
+                <video
+                    id="game-pad"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                >
+
+                    <source
+                        src="media/video/pad.mp4"
+                        type="video/mp4"
+                    >
+
+                </video>
+
+            </div>
+
+        </section>
+
+
+        <!-- Services -->
+
+        <section class="what-we-do">
+
+            <div class="what-we-do-heading">
+
+                <p class="section-label">
+                    Our services
+                </p>
+
+                <h2>
+                    What We Do
+                </h2>
+
+                <p>
+                    We help gamers explore titles, discover useful
+                    information and stay connected with the gaming
+                    world.
+                </p>
+
+            </div>
+
+
+            <div class="services-container">
+
+                <article class="service-card">
+
+                    <span class="service-icon">
+                        🎮
+                    </span>
+
+                    <h3>
+                        Discover Games
+                    </h3>
+
+                    <p>
+                        Explore popular games, timeless classics and
+                        upcoming releases from different platforms.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <span class="service-icon">
+                        ⭐
+                    </span>
+
+                    <h3>
+                        Reviews and Ratings
+                    </h3>
+
+                    <p>
+                        Read clear game descriptions, ratings and
+                        recommendations before choosing what to play.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <span class="service-icon">
+                        📰
+                    </span>
+
+                    <h3>
+                        Gaming News
+                    </h3>
+
+                    <p>
+                        Stay informed about releases, updates and
+                        developments from the gaming industry.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-logo">
+
+                <div class="footer-brand">
+
+                    <img
+                        src="media/images/space.png"
+                        alt="Game Universe logo"
+                    >
+
+                    <h2>
+                        Game Universe
+                    </h2>
+
+                </div>
+
+                <p>
+                    Discover games, reviews, news and unforgettable
+                    adventures from every major gaming platform.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="games.html">Games</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Platforms</h3>
+
+                <ul>
+                    <li><a href="#">PlayStation</a></li>
+                    <li><a href="#">Xbox</a></li>
+                    <li><a href="#">Nintendo</a></li>
+                    <li><a href="#">PC Gaming</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Follow Us</h3>
+
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">Discord</a></li>
+                    <li><a href="#">TikTok</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
             <p>
-                Explore popular games, timeless classics and upcoming releases
-                from different platforms.
+                &copy; 2026 Game Universe.
+                All rights reserved.
             </p>
-        </article>
-
-        <article class="service-card">
-            <span class="service-icon">⭐</span>
-            <h3>Reviews and Ratings</h3>
-            <p>
-                Read clear game descriptions, ratings and recommendations
-                before choosing what to play.
-            </p>
-        </article>
-
-        <article class="service-card">
-            <span class="service-icon">📰</span>
-            <h3>Gaming News</h3>
-            <p>
-                Stay informed about new releases, updates and important
-                developments from the gaming industry.
-            </p>
-        </article>
-
-    </div>
-
-</section>
-<footer class="footer">
-
-    <div class="footer-container">
-
-        <div class="footer-logo">
-            <h2>🚀 Game Universe</h2>
-
-            <p>
-                Discover the best games, reviews, news and
-                gaming content from every platform.
-            </p>
-        </div>
-
-        <div class="footer-links">
-
-            <h3>Quick Links</h3>
-
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="games.html">Games</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
 
         </div>
 
-        <div class="footer-links">
+    </footer>
 
-            <h3>Platforms</h3>
 
-            <ul>
-                <li><a href="#">PlayStation</a></li>
-                <li><a href="#">Xbox</a></li>
-                <li><a href="#">Nintendo</a></li>
-                <li><a href="#">PC Gaming</a></li>
-            </ul>
+    <!-- Same cart JavaScript used by games.html -->
 
-        </div>
+    <script src="script/script.js"></script>
 
-        <div class="footer-links">
-
-            <h3>Follow Us</h3>
-
-            <ul>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">YouTube</a></li>
-                <li><a href="#">Discord</a></li>
-                <li><a href="#">TikTok</a></li>
-            </ul>
-
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 Game Universe. All rights reserved.
-        </p>
-
-    </div>
-
-</footer>
 </body>
 
 </html>
