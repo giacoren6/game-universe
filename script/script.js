@@ -1372,6 +1372,11 @@ function showContactSuccess(firstName) {
             closeWithEscape
         );
 
+        showToast(
+            "Thanks for contacting Game Universe!",
+            "success"
+        );
+
     }
 
 

@@ -512,7 +512,7 @@
 
     width:70%;
 
-    height:70%;
+    height: 320px;;
 
     object-fit:cover;
 
@@ -2804,6 +2804,19 @@ body.cart-open {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .section1 {
+        padding: 70px 6%;
+    }
+    
+    .game-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    
+    .game-card img {
+        max-width: 240px;
+        height: 330px;
+    }
+
     .about-page-story {
         width: 100%;
         grid-template-columns: 1fr;
@@ -2988,7 +3001,8 @@ body.cart-open {
     }
 
     .game-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
     }
 
     #ps1 {
@@ -3038,6 +3052,38 @@ body.cart-open {
 ===================================== */
 
 @media screen and (max-width: 600px) {
+
+
+    .section1 {
+        padding: 60px 20px;
+    }
+    
+    .section1 h2 {
+        margin-bottom: 30px;
+        font-size: 32px;
+    }
+    
+    .game-list {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .game-card {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+    
+    .game-card img {
+        width: 100%;
+        max-width: 240px;
+        height: 340px;
+    }
+    
+    .game-card button {
+        width: 100%;
+        max-width: none;
+    }
 
     .about {
         padding: 65px 20px;
