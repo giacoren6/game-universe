@@ -15,3 +15,8 @@ Other interactive features include toast notifications, active navigation links,
 Accessibility was also considered during development. The website uses semantic HTML elements, form labels, alternative text for images, clear colour contrast and visible focus states for keyboard users. The pages were designed to be easy to navigate and understandable for different users.
 
 This website was developed for the Web Development module and demonstrates my understanding of responsive web design, HTML structure, CSS styling, JavaScript DOM manipulation, Local Storage, accessibility and basic user experience principles.
+
+Welcome to [Game Universe](https://giacoren6.github.io/game-universe/index.html)
+
+
+<img width="1829" height="965" alt="Screenshot 2026-07-23 at 13 18 50" src="https://github.com/user-attachments/assets/ec7c4f35-e068-4e2b-bf0b-9782ee04c23d" />
