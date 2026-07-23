@@ -105,6 +105,15 @@ The shopping cart was developed entirely using JavaScript and Local Storage. It 
 Whenever a product is added, removed or updated, the cart automatically recalculates the total price and refreshes the displayed information. The cart is also saved in Local Storage, allowing products to remain available even after refreshing the page.
 
 
+- Add products
+- Remove products
+- Increase quantity
+- Decrease quantity
+- Automatic total calculation
+- Local Storage persistence
+- Checkout simulation
+- Purchase notification
+
 <img width="1917" height="989" alt="Screenshot 2026-07-23 at 14 16 12" src="https://github.com/user-attachments/assets/83e06cde-7f0d-4ae8-8740-aa5258bb3f9b" />
 
 <img width="1920" height="989" alt="Screenshot 2026-07-23 at 14 16 27" src="https://github.com/user-attachments/assets/6afd3572-3501-44ca-b13a-db367d0431de" />
