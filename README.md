@@ -121,6 +121,34 @@ Whenever a product is added, removed or updated, the cart automatically recalcul
 <img width="1893" height="986" alt="Screenshot 2026-07-23 at 14 16 35" src="https://github.com/user-attachments/assets/37017773-2341-4181-bec0-6c1901c7e0a8" />
 
 
+## About Page
+
+The About page introduces the purpose of Game Universe and provides that users visit with more information regarding the website. It explains the website's mission, vision and values while maintaining the same gaming style used throughout the rest of the website.
+
+The page combines large background images, videos, cards and animations to create a visually engaging experience while remaining responsive on different screen sizes.
+
+- Hero banner
+- Mission section
+- Vision and values
+- Controller video
+- Animated cards
+- Responsive layout
+
+
+<img width="2940" height="1356" alt="Screenshot 2026-07-23 at 16 50 15" src="https://github.com/user-attachments/assets/dc6c1ff6-79b2-48cf-b744-52b643b6c05c" />
+
+<img width="2940" height="1230" alt="Screenshot 2026-07-23 at 16 50 22" src="https://github.com/user-attachments/assets/609fafa5-1647-4ac3-b781-f569b09dc74a" />
+
+<img width="2940" height="1092" alt="Screenshot 2026-07-23 at 16 50 39" src="https://github.com/user-attachments/assets/8d601da8-a4b0-40a3-957e-7f5ba5566e66" />
+
+
+<img width="2940" height="909" alt="Screenshot 2026-07-23 at 16 51 02" src="https://github.com/user-attachments/assets/78ea7f67-098a-439c-84a6-e68aa3926f82" />
+
+
+<img width="2940" height="1400" alt="Screenshot 2026-07-23 at 16 51 09" src="https://github.com/user-attachments/assets/82184205-9d10-497f-bc47-4d5f554a2147" />
+
+
+
 
 
 
