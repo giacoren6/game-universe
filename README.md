@@ -76,5 +76,28 @@ The page includes a responsive navigation bar, featured games, an About preview 
 
 
 
+## Games Page
+
+The Games page acts as the main product catalogue of the website. It displays a collection of games presented as interactive product cards containing the game image, title, platform, category, description and price.
+
+Users can search for games using the search bar or filter the collection by platform. Every product can be added directly to the shopping cart without refreshing the page thanks to JavaScript.
+
+- Game products
+- Product cards
+- Search functionality
+- Platform filters
+- Add to Cart buttons
+- Responsive product grid
+- Interactive hover effects
+
+
+<img width="1896" height="688" alt="Screenshot 2026-07-23 at 14 00 10" src="https://github.com/user-attachments/assets/587bba1b-7c7c-465c-a55c-f6a1d7b3ff2c" />
+
+<img width="1898" height="885" alt="Screenshot 2026-07-23 at 14 00 30" src="https://github.com/user-attachments/assets/db20d575-9ca8-483a-9f6d-dc349a1b383d" />
+
+<img width="1920" height="988" alt="Screenshot 2026-07-23 at 14 01 15" src="https://github.com/user-attachments/assets/4abdacee-a839-4922-8054-c05be9baa0be" />
+
+<img width="1882" height="780" alt="Screenshot 2026-07-23 at 14 00 59" src="https://github.com/user-attachments/assets/08739d8f-a50e-4b84-ab22-f96fd0987faa" />
+
 
 
