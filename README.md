@@ -98,4 +98,20 @@ Users can search for games using the search bar or filter the collection by plat
 <img width="1882" height="780" alt="Screenshot 2026-07-23 at 14 00 59" src="https://github.com/user-attachments/assets/08739d8f-a50e-4b84-ab22-f96fd0987faa" />
 
 
+## Shopping Cart
+
+The shopping cart was developed entirely using JavaScript and Local Storage. It allows users to manage their selected products in a realistic way without requiring a backend implementations.
+
+Whenever a product is added, removed or updated, the cart automatically recalculates the total price and refreshes the displayed information. The cart is also saved in Local Storage, allowing products to remain available even after refreshing the page.
+
+
+<img width="1917" height="989" alt="Screenshot 2026-07-23 at 14 16 12" src="https://github.com/user-attachments/assets/83e06cde-7f0d-4ae8-8740-aa5258bb3f9b" />
+
+<img width="1920" height="989" alt="Screenshot 2026-07-23 at 14 16 27" src="https://github.com/user-attachments/assets/6afd3572-3501-44ca-b13a-db367d0431de" />
+
+<img width="1893" height="986" alt="Screenshot 2026-07-23 at 14 16 35" src="https://github.com/user-attachments/assets/37017773-2341-4181-bec0-6c1901c7e0a8" />
+
+
+
+
 
