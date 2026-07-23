@@ -148,6 +148,30 @@ The page combines large background images, videos, cards and animations to creat
 <img width="2940" height="1400" alt="Screenshot 2026-07-23 at 16 51 09" src="https://github.com/user-attachments/assets/82184205-9d10-497f-bc47-4d5f554a2147" />
 
 
+## Contact Page
+
+The Contact page allows users to send enquiries through a contact form. Client-side JavaScript validation checks that all required information has been completed before allowing the form to be submitted.
+
+After submission, the user receives a success message and notification to confirm that the demonstration form has been completed successfully.
+
+The page also includes contact information, social media links and a Frequently Asked Questions section to improve the user experience.
+
+
+- Contact form
+- Form validation
+- Success notification
+- Contact information
+- Social media buttons
+- FAQ section
+- Responsive interface
+
+<img width="2940" height="1338" alt="Screenshot 2026-07-23 at 16 59 05" src="https://github.com/user-attachments/assets/2702efea-4365-454c-adb8-bb2c44833b4e" />
+
+<img width="2940" height="1645" alt="Screenshot 2026-07-23 at 16 59 26" src="https://github.com/user-attachments/assets/f2d106bb-3964-44a0-aa03-95473a58668b" />
+
+<img width="2940" height="922" alt="Screenshot 2026-07-23 at 16 59 33" src="https://github.com/user-attachments/assets/4bfb689b-9d7d-4789-9e4a-096ca9b1e91e" />
+
+<img width="2940" height="1385" alt="Screenshot 2026-07-23 at 16 59 40" src="https://github.com/user-attachments/assets/7214189d-2781-4989-abc2-8ddcac9f2ca8" />
 
 
 
