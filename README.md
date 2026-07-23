@@ -49,3 +49,32 @@ Spacing and alignment were kept consistent by using CSS Grid and Flexbox. These 
 The layout was also designed to be responsive. On desktop screens, sections can use multiple columns, while tablets and mobile devices display fewer columns or a single-column layout. Images, videos, text and buttons resize or reposition depending on the screen width. The navigation bar changes into a hamburger menu on smaller devices, and the shopping cart adjusts its width to fit mobile screens.
 
 Overall, the combination of videos, gaming images, dark backgrounds, purple highlights, animations and responsive layouts was chosen to make Game Universe look professional, modern and suitable for an online gaming store.
+
+# Features
+
+## Home Page
+
+The Home page is the first page users see when visiting the website. It was designed to immediately introduce the gaming theme through a full-screen hero video, bold headings and call-to-action buttons.
+
+The page includes a responsive navigation bar, featured games, an About preview and a services section that explains what the website offers. Smooth scrolling, hover animations and responsive layouts improve the browsing experience and encourage users to continue exploring the website.
+
+- Responsive navigation bar
+- Background video
+- Featured games section
+- About preview
+- Services section
+- Call to action buttons
+- Footer with useful links
+
+<img width="1906" height="976" alt="Screenshot 2026-07-23 at 13 49 32" src="https://github.com/user-attachments/assets/132eba4a-8ec5-4fe6-943d-1fe46da35268" />
+
+<img width="1900" height="600" alt="Screenshot 2026-07-23 at 13 49 56" src="https://github.com/user-attachments/assets/2d54100a-4c7f-4f07-8916-79d404bea86f" />
+
+<img width="1886" height="983" alt="Screenshot 2026-07-23 at 13 50 07" src="https://github.com/user-attachments/assets/9caae4ea-7c2e-49db-8f78-261eeb891fc5" />
+
+<img width="1895" height="986" alt="Screenshot 2026-07-23 at 13 50 15" src="https://github.com/user-attachments/assets/532d95ab-221f-4666-882a-0a9a853aa250" />
+
+
+
+
+
