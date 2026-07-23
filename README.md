@@ -34,7 +34,7 @@ The aim of Game Universe is to provide users with a modern online gaming store w
 - Manage a shopping cart
 - Being responsive on every device
 
-## Desing 
+## Design
 
 The design of Game Universe was created to give the website a modern and immersive gaming style. I used a consistent dark colour theme across all pages, with dark navy backgrounds, purple highlights and white text. The main colours include dark blue such as #080b16 and #0b1020, purple such as #a855f7, and white for important headings and content. The purple colour is used for buttons, active navigation links, labels, borders and hover effects so that the website keeps the same visual identity throughout.
 
@@ -174,5 +174,29 @@ The page also includes contact information, social media links and a Frequently 
 <img width="2940" height="1385" alt="Screenshot 2026-07-23 at 16 59 40" src="https://github.com/user-attachments/assets/7214189d-2781-4989-abc2-8ddcac9f2ca8" />
 
 
+# Responsive Design 
 
+Game Universe was designed to work on desktop, tablet and mobile devices. I used CSS Grid, Flexbox and media queries to adjust the layout depending on the screen size.
+
+## Desktop
+
+On larger screens, the website uses multiple columns. Product cards display three per row, and sections such as About use text and images side by side.
+
+### Tablets — 900px and smaller
+
+At 900px, the main sections change into fewer columns. Product cards and service cards display two per row, while the About and Contact sections move into a single-column layout.
+
+### Small tablets — 768px and smaller
+
+At 768px, the normal navigation changes into a hamburger menu. The hero buttons move into a vertical layout, and the header, logo and cart button become smaller.
+
+### Mobile phones — 600px and smaller
+
+At 600px, most sections display one item per row. Product cards, forms, footer links and service cards become full width. Headings, images, videos and spacing also become smaller to fit mobile screens.
+
+The hero videos and background images use object-fit: cover and background-size: cover, while their positions are adjusted so the important parts remain visible.
+
+The shopping cart also changes size depending on the device. It appears as a side panel on desktop and becomes wider or full screen on smaller phones.
+
+I tested the website using Chrome DevTools at different screen sizes to ensure that the navigation, products, forms, images, videos and shopping cart work correctly on every device.
 
