@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #c084fc;
+    outline-offset: 3px;
+}
+
 .header {
     width: 100%;
     height: 80px;
