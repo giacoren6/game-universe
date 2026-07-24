@@ -1,6 +1,6 @@
 # Game-Universe
 
-Game Universe is a responsive front-end e-commerce website developed using HTML5, CSS3 and JavaScript. The main idea of the project was to create a modern gaming store where users can explore different games and interact with the website in a simple and realistic way.
+Game Universe is a responsive front-end e-commerce website developed using HTML5, CSS3 and JavaScript. The main idea of the project was to create a modern gaming store with different platforms where users can explore different games and interact with the website in a simple and realistic way.
 
 The website allows users to browse a collection of games, search for a specific title and filter products by platform. Each game is displayed inside a product card that includes an image, name, category, price and an Add to Cart button. This makes the product information easy to understand and helps users quickly find the games they are interested in.
 
@@ -8,13 +8,13 @@ The shopping cart was created using JavaScript. When a user adds a game, JavaScr
 
 The website includes a responsive navigation bar that changes into a mobile menu on smaller screens. CSS Grid, Flexbox and media queries were used to make the layout work correctly on desktop, tablet and mobile devices. Images, videos, buttons, product cards and text sections resize and reposition depending on the screen size.
 
-Game Universe also includes separate Home, Games, About and Contact pages. The Home page introduces the website through a hero video and featured games. The Games page contains the full product collection, search system, platform filters and shopping cart. The About page explains the purpose, mission and values of the website. The Contact page includes a form with client-side validation and a success notification after submission.
+Game Universe also includes separate Home, Games, About and Contact pages. The Home page introduces the website through a gamepad video and featured games. The Games page contains the full product collection, search system, platform filters and shopping cart. The About page explains the purpose, mission and values of the website. The Contact page includes a form with client side validation and a success notification after submission.
 
 Other interactive features include toast notifications, active navigation links, hover effects, animated buttons, a mobile hamburger menu and a simulated checkout confirmation. These features were added to improve the user experience and make the website feel more complete.
 
 Accessibility was also considered during development. The website uses semantic HTML elements, form labels, alternative text for images, clear colour contrast and visible focus states for keyboard users. The pages were designed to be easy to navigate and understandable for different users.
 
-This website was developed for the Web Development module and demonstrates my understanding of responsive web design, HTML structure, CSS styling, JavaScript DOM manipulation, Local Storage, accessibility and basic user experience principles.
+This website was developed for the Web Development module and demonstrates my understanding of responsive web design, HTML, CSS, JavaScript, Local Storage, accessibility and basic user experience principles.
 
 Welcome to [Game Universe](https://giacoren6.github.io/game-universe/index.html)
 
@@ -36,17 +36,17 @@ The aim of Game Universe is to provide users with a modern online gaming store w
 
 ## Design
 
-The design of Game Universe was created to give the website a modern and immersive gaming style. I used a consistent dark colour theme across all pages, with dark navy backgrounds, purple highlights and white text. The main colours include dark blue such as #080b16 and #0b1020, purple such as #a855f7, and white for important headings and content. The purple colour is used for buttons, active navigation links, labels, borders and hover effects so that the website keeps the same visual identity throughout.
+The design of Game Universe was created to give the website a modern and immersive gaming style. I used a consistent dark colour theme across all pages, with dark navy backgrounds, purple highlights and white text. The main colours include dark blue, purple, and white for important headings and content. The purple colour is used for buttons, active navigation links, labels, borders and hover effects so that the website keeps the same visual identity throughout.
 
-Images and videos are used in almost every main section to make the website more engaging. The Home page begins with a large background video that immediately introduces the gaming theme. The About section includes a controller video inside a circular frame with a purple glow effect. The About, Games and Contact pages also use large background images in their hero sections. These images help users understand the purpose of each page before reading the content.
+Images and videos are used in almost every main section to make the website more involving. The Home page begins with a large background video that immediately introduces the gaming theme. The About section includes a controller video inside a circular frame with a purple glow effect. The About, Games and Contact pages also use large background images in their hero sections. These images help users understand the purpose of each page before reading the content.
 
 The product sections use gaming cover images inside the product cards. Each card contains an image, game title, category, platform, description, price and Add to Cart button. Shadows, rounded corners, borders and hover animations were added to make the cards feel interactive. When users move the mouse over a product card, the card moves slightly upwards and the image enlarges, helping users see which product they are selecting.
 
-A dark transparent overlay is placed over the hero images and videos. This reduces the brightness of the background and allows the white text and purple buttons to remain readable. The hero content is positioned in the centre of the section so that the main title, description and buttons are immediately visible.
+A dark transparent overlay is placed over the images and videos. This reduces the brightness of the background and allows the white text and purple buttons to remain readable. The content is positioned in the centre of the section so that the main title, description and buttons are immediately visible.
 
 Spacing and alignment were kept consistent by using CSS Grid and Flexbox. These tools helped organise the navigation bar, product grids, service cards, forms, footer and shopping cart. Rounded buttons and smooth hover transitions are used across the website to create a consistent user experience.
 
-The layout was also designed to be responsive. On desktop screens, sections can use multiple columns, while tablets and mobile devices display fewer columns or a single-column layout. Images, videos, text and buttons resize or reposition depending on the screen width. The navigation bar changes into a hamburger menu on smaller devices, and the shopping cart adjusts its width to fit mobile screens.
+The layout was also designed to be responsive. On desktop screens, sections can use multiple columns, while tablets and mobile devices display fewer columns or a single column layout. Images, videos, text and buttons resize or reposition depending on the screen width. The navigation bar changes into a hamburger menu on smaller devices, and the shopping cart adjusts its width to fit mobile screens.
 
 Overall, the combination of videos, gaming images, dark backgrounds, purple highlights, animations and responsive layouts was chosen to make Game Universe look professional, modern and suitable for an online gaming store.
 
@@ -150,7 +150,7 @@ The page combines large background images, videos, cards and animations to creat
 
 ## Contact Page
 
-The Contact page allows users to send enquiries through a contact form. Client-side JavaScript validation checks that all required information has been completed before allowing the form to be submitted.
+The Contact page allows users to send enquiries through a contact form. Client side JavaScript validation checks that all required information has been completed before allowing the form to be submitted.
 
 After submission, the user receives a success message and notification to confirm that the demonstration form has been completed successfully.
 
@@ -184,17 +184,17 @@ On larger screens, the website uses multiple columns. Product cards display thre
 
 ### Tablets — 900px and smaller
 
-At 900px, the main sections change into fewer columns. Product cards and service cards display two per row, while the About and Contact sections move into a single-column layout.
+At 900px, the main sections change into fewer columns. Product cards and service cards display two per row, while the About and Contact sections move into a single column layout.
 
 ### Small tablets — 768px and smaller
 
-At 768px, the normal navigation changes into a hamburger menu. The hero buttons move into a vertical layout, and the header, logo and cart button become smaller.
+At 768px, the normal navigation changes into a hamburger menu. The buttons move into a vertical layout, and the header, logo and cart button become smaller.
 
 ### Mobile phones — 600px and smaller
 
 At 600px, most sections display one item per row. Product cards, forms, footer links and service cards become full width. Headings, images, videos and spacing also become smaller to fit mobile screens.
 
-The hero videos and background images use object-fit: cover and background-size: cover, while their positions are adjusted so the important parts remain visible.
+The videos and background images use object-fit: cover and background-size: cover, while their positions are adjusted so the important parts remain visible.
 
 The shopping cart also changes size depending on the device. It appears as a side panel on desktop and becomes wider or full screen on smaller phones.
 
@@ -257,3 +257,6 @@ I checked that the navigation, shopping cart, search bar, platform filters, cont
 During testing, I found and fixed a few issues, including improving the mobile navigation menu, adjusting the shopping cart size, fixing the product grid on smaller screens and correcting the positioning of hero images and videos.
 
 After completing these tests, the website worked correctly across all pages and devices, providing a smooth and consistent user experience.
+
+
+<img width="2940" height="1681" alt="Screenshot 2026-07-24 at 17 02 08" src="https://github.com/user-attachments/assets/a667dac1-a8e3-414e-80ba-0d72f12f74d9" />
