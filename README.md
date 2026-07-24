@@ -200,3 +200,35 @@ The shopping cart also changes size depending on the device. It appears as a sid
 
 I tested the website using Chrome DevTools at different screen sizes to ensure that the navigation, products, forms, images, videos and shopping cart work correctly on every device.
 
+
+
+# Technologies Used
+
+- HTML5
+
+HTML5 was used to create the structure of every page in the website. Semantic elements such as header, nav, main, section and footer were used to organise the content and improve accessibility.
+
+- CSS3
+
+CSS3 was used to design the appearance of the website and create a modern gaming style. It was also used to make the website responsive by using CSS Grid, Flexbox, media queries, animations, hover effects and transitions.
+
+- JavaScript
+
+JavaScript was used to add interactivity to the website. It controls the shopping cart, search functionality, platform filters, contact form validation, checkout process, toast notifications and Local Storage.
+
+- Local Storage
+
+Local Storage was used to save the shopping cart data inside the browser. This allows users to keep their selected products even after refreshing or closing the website.
+
+- Git & GitHub
+
+Git was used for version control during development, while GitHub was used to store the project repository and manage the source code.
+
+GitHub Pages
+
+GitHub Pages was used to deploy the website online, allowing users to access the project through a web browser.
+
+- Chrome DevTools
+
+Chrome DevTools was used to test responsiveness, inspect elements, debug CSS and JavaScript, and ensure the website worked correctly on different screen sizes.
+
