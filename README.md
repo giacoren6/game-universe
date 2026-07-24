@@ -232,3 +232,28 @@ GitHub Pages was used to deploy the website online, allowing users to access the
 
 Chrome DevTools was used to test responsiveness, inspect elements, debug CSS and JavaScript, and ensure the website worked correctly on different screen sizes.
 
+
+# Accessibility
+
+Accessibility was considered during the development of Game Universe to make the website easier to use for different users.
+
+The following accessibility features were implemented:
+
+- Semantic HTML elements such as header, nav, main, section and footer.
+- Alternative text (alt) for images.
+- Labels for all form inputs.
+- colour contrast between the dark background and white text.
+- Large buttons and links that are easy to click on desktop and mobile devices.
+- Responsive layouts that work across different screen sizes.
+
+
+
+# Testing 
+
+Game Universe was tested during development to make sure all pages and features worked correctly. I used Google Chrome and Chrome DevTools to test the website on desktop, tablet and mobile screen sizes.
+
+I checked that the navigation, shopping cart, search bar, platform filters, contact form and checkout worked as expected. I also tested the responsive layout to make sure images, videos, product cards and other sections adapted correctly to different screen sizes.
+
+During testing, I found and fixed a few issues, including improving the mobile navigation menu, adjusting the shopping cart size, fixing the product grid on smaller screens and correcting the positioning of hero images and videos.
+
+After completing these tests, the website worked correctly across all pages and devices, providing a smooth and consistent user experience.
