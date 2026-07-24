@@ -1,14 +1,9 @@
 "use strict";
 
-/* =========================================
-   GAME UNIVERSE
-   Search, platform filters and shopping cart
-========================================= */
+/* Search, platform filters and shopping cart*/
 
 
-/* =========================================
-   SELECT HTML ELEMENTS
-========================================= */
+/* SELECT HTML ELEMENTS */
 
 const cartButton = document.querySelector("#cart-button");
 const cartPanel = document.querySelector("#cart-panel");
@@ -51,9 +46,7 @@ const navigationLinks = document.querySelectorAll(
 );
 
 
-/* =========================================
-   CART VARIABLES
-========================================= */
+/* CART VARIABLES */
 
 const CART_STORAGE_KEY = "gameUniverseCart";
 
@@ -62,9 +55,7 @@ let cart = loadCart();
 let activePlatform = "all";
 
 
-/* =========================================
-   LOCAL STORAGE
-========================================= */
+/* LOCAL STORAGE */
 
 function loadCart() {
     try {
@@ -108,9 +99,7 @@ function saveCart() {
 }
 
 
-/* =========================================
-   OPEN AND CLOSE CART
-========================================= */
+/* OPEN AND CLOSE CART */
 
 function openCart() {
     if (!cartPanel || !cartOverlay) {
@@ -152,9 +141,7 @@ function closeCart() {
 }
 
 
-/* =========================================
-   CREATE GAME INFORMATION
-========================================= */
+/* CREATE GAME INFORMATION */
 
 function getGameFromCard(gameCard) {
     if (!gameCard) {
@@ -206,9 +193,7 @@ function createGameId(name) {
 }
 
 
-/* =========================================
-   ADD GAME TO CART
-========================================= */
+/* ADD GAME TO CART */
 
 function addGameToCart(game) {
     const existingGame = cart.find(
@@ -272,9 +257,7 @@ function handleAddToCart(button) {
 }
 
 
-/* =========================================
-   REMOVE GAME
-========================================= */
+/* REMOVE GAME */
 
 function removeGameFromCart(gameId) {
     const gameToRemove = cart.find(
@@ -297,9 +280,7 @@ function removeGameFromCart(gameId) {
 }
 
 
-/* =========================================
-   CHANGE QUANTITY
-========================================= */
+/* CHANGE QUANTITY */
 
 function changeGameQuantity(gameId, amount) {
     const game = cart.find(
@@ -325,9 +306,7 @@ function changeGameQuantity(gameId, amount) {
 }
 
 
-/* =========================================
-   CALCULATE TOTAL
-========================================= */
+/* CALCULATE TOTAL */
 
 function calculateCartTotals() {
     return cart.reduce(
@@ -375,9 +354,7 @@ function formatPlatform(platform) {
 }
 
 
-/* =========================================
-   DISPLAY CART
-========================================= */
+/* DISPLAY CART */
 
 function renderCart() {
     const totals = calculateCartTotals();
@@ -592,9 +569,7 @@ function updateCheckoutButton() {
 }
 
 
-/* =========================================
-   CLEAR CART
-========================================= */
+/* CLEAR CART */
 
 function clearCart() {
     if (cart.length === 0) {
@@ -626,9 +601,7 @@ function clearCart() {
 }
 
 
-/* =========================================
-   DEMONSTRATION CHECKOUT
-========================================= */
+/* DEMONSTRATION CHECKOUT */
 
 function checkout() {
     if (cart.length === 0) {
@@ -778,9 +751,7 @@ function showOrderSuccess(totals) {
 }
 
 
-/* =========================================
-   SEARCH AND EXACT PLATFORM FILTERING
-========================================= */
+/* SEARCH AND EXACT PLATFORM FILTERING */
 
 function filterGames() {
     if (gameCards.length === 0) {
@@ -871,9 +842,7 @@ function filterGames() {
 }
 
 
-/* =========================================
-   NO SEARCH RESULTS
-========================================= */
+/* NO SEARCH RESULTS */
 
 function renderSearchMessage(
     visibleGames
@@ -971,9 +940,7 @@ function resetGameSearch() {
 }
 
 
-/* =========================================
-   TOAST NOTIFICATIONS
-========================================= */
+/* TOAST NOTIFICATIONS */
 
 function showToast(
     message,
@@ -1078,9 +1045,7 @@ function removeToast(toast) {
 }
 
 
-/* =========================================
-   PROTECT INSERTED TEXT
-========================================= */
+/* PROTECT INSERTED TEXT */
 
 function escapeHTML(value) {
     return String(value)
@@ -1092,9 +1057,7 @@ function escapeHTML(value) {
 }
 
 
-/* =========================================
-   ADD-TO-CART EVENTS
-========================================= */
+/* ADD-TO-CART EVENTS */
 
 addToCartButtons.forEach(
     (button) => {
@@ -1110,10 +1073,7 @@ addToCartButtons.forEach(
 );
 
 
-/* =========================================
-   FILTER BUTTON EVENTS
-========================================= */
-
+/* FILTER BUTTON EVENTS */
 filterButtons.forEach(
     (button) => {
         button.addEventListener(
@@ -1144,9 +1104,7 @@ filterButtons.forEach(
 );
 
 
-/* =========================================
-   SEARCH EVENTS
-========================================= */
+/* SEARCH EVENTS */
 
 if (searchInput) {
     /*
@@ -1186,9 +1144,7 @@ if (searchButton) {
 }
 
 
-/* =========================================
-   CART EVENTS
-========================================= */
+/* CART EVENTS */
 
 if (cartButton) {
     cartButton.addEventListener(
@@ -1230,9 +1186,7 @@ if (checkoutButton) {
 }
 
 
-/* =========================================
-   KEYBOARD EVENTS
-========================================= */
+/*  KEYBOARD EVENTS */
 
 document.addEventListener(
     "keydown",
@@ -1244,9 +1198,7 @@ document.addEventListener(
 );
 
 
-/* =========================================
-   CLOSE MOBILE MENU
-========================================= */
+/* CLOSE MOBILE MENU */
 
 navigationLinks.forEach(
     (link) => {
@@ -1265,17 +1217,13 @@ navigationLinks.forEach(
 );
 
 
-/* =========================================
-   START WEBSITE
-========================================= */
+/* START WEBSITE */
 
 renderCart();
 filterGames();
 
 
-/* =========================================
-   CONTACT FORM
-========================================= */
+/* CONTACT FORM */
 
 const contactForm = document.querySelector("#contact-form");
 
