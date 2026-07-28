@@ -1067,12 +1067,10 @@ textarea:focus-visible {
 
 
 
-/* ========================================
-   CONTACT PAGE
-======================================== */
+/* CONTACT PAGE */
 
 
-/* Contact hero */
+/* Contact */
 
 .contact-hero {
     min-height: 580px;
@@ -1476,9 +1474,7 @@ textarea:focus-visible {
 }
 
 
-/* ========================================
-   GAMES PAGE
-======================================== */
+/* GAMES PAGE */
 
 /* Games hero */
 
@@ -1916,7 +1912,7 @@ textarea:focus-visible {
 }
 
 
-/* Toast messages */
+/* messages */
 
 .toast-container {
     position: fixed;
@@ -2124,9 +2120,7 @@ textarea:focus-visible {
 
 
 
-/* ========================================
-   SHOPPING CART
-======================================== */
+/* SHOPPING CART */
 
 /* Cart icon in navbar */
 
@@ -2182,7 +2176,7 @@ textarea:focus-visible {
 }
 
 
-/* Dark overlay behind cart */
+/* Dark overlay cart */
 
 .cart-overlay {
     position: fixed;
@@ -2298,7 +2292,7 @@ body.cart-open {
 }
 
 
-/* One cart product */
+/* cart product */
 
 .cart-item {
     position: relative;
@@ -2365,7 +2359,7 @@ body.cart-open {
 }
 
 
-/* Quantity controls */
+/* controls */
 
 .quantity-controls {
     display: inline-flex;
@@ -2661,7 +2655,7 @@ body.cart-open {
 }
 
 
-/* Purchase success modal */
+/* Purchase success */
 
 .order-success-overlay {
     position: fixed;
@@ -2783,9 +2777,7 @@ body.cart-open {
 
 
 
-/* =====================================
-   TABLETS — 900px and smaller
-===================================== */
+/* TABLETS — 900px and smaller */
 
 @media screen and (max-width: 900px) {
 
@@ -2935,9 +2927,7 @@ body.cart-open {
 }
 
 
-/* =====================================
-   NAVBAR AND SMALL TABLETS — 768px
-===================================== */
+/* NAVBAR AND SMALL TABLETS — 768px */
 
 @media screen and (max-width: 768px) {
 
@@ -3058,9 +3048,7 @@ body.cart-open {
 }
 
 
-/* =====================================
-   PHONES — 600px and smaller
-===================================== */
+/* PHONES — 600px and smaller */
 
 @media screen and (max-width: 600px) {
 
@@ -3182,7 +3170,7 @@ body.cart-open {
         height: 280px;
     }
 
-    /* Other About page sections */
+    /* About page sections */
 
     .mission-section,
     .values-section,
