@@ -127,7 +127,6 @@ The About page introduces the purpose of Game Universe and provides that users v
 
 The page combines large background images, videos, cards and animations to create a visually engaging experience while remaining responsive on different screen sizes.
 
-- Hero banner
 - Mission section
 - Vision and values
 - Controller video
