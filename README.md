@@ -1,4 +1,3 @@
-<img width="1340" height="531" alt="lighthouse2" src="https://github.com/user-attachments/assets/d6084b73-6c2e-43d6-a67f-6d75ef290d60" />
 # Game-Universe
 
 Game Universe is a responsive front-end e-commerce website developed using HTML5, CSS3 and JavaScript. The main idea of the project was to create a modern gaming store with different platforms where users can explore different games and interact with the website in a simple and realistic way.
